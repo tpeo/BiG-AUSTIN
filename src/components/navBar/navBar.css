@@ -64,12 +64,12 @@ ul li a {
   display: none !important;
 }
 
-.gPySTH, .cmInhN, .bEYqJm, .cmInhN, .gYajhe, .uKehN, .iPRHCQ, .kgEGoE, .cNtEWp, .hjVKzM {
+.gPySTH, .cmInhN, .gPySTH, .bEYqJm, .cmInhN, .gYajhe, .uKehN, .iPRHCQ, .kgEGoE, .cNtEWp, .hjVKzM {
   position: absolute;
   box-shadow: none !important;
   background-color: #435058 !important;
   margin-top: -8px !important;
-  height: 165px;
+  height: 165px !important;
   border-radius: 0px 0px 10px 10px !important;
 }
 
