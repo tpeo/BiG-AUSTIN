@@ -35,12 +35,20 @@ ul li a {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: white !important;
+}
+
+ul li a:hover{
+  color: #219D80 !important;
 }
 
 
 .ldSkFT > div {
   letter-spacing: 1px;
+}
+
+.ldSkFT > div:hover {
+  color: #2bf8c8;
 }
 
 .logo{
@@ -64,7 +72,7 @@ ul li a {
   display: none !important;
 }
 
-.gPySTH, .cmInhN, .gPySTH, .bEYqJm, .cmInhN, .gYajhe, .uKehN, .iPRHCQ, .kgEGoE, .cNtEWp, .hjVKzM {
+.gPySTH, .cALUAZ, .cmInhN, .gPySTH, .bEYqJm, .cmInhN, .gYajhe, .uKehN, .iPRHCQ, .kgEGoE, .cNtEWp, .hjVKzM {
   position: absolute;
   box-shadow: none !important;
   background-color: #435058 !important;
@@ -101,8 +109,17 @@ ul li a {
 
 }
 
-.jEchia{
+.jEchia:hover{
   /* color: #219D80 !important; */
+  color: #2bf8c8;
+}
+
+.deePyz:hover{
+  color: #2bf8c8;
+}
+
+.kpabHS:hover{
+  color: #2bf8c8;
 }
 /* .src__ContentGroupContainer-sc-178mgjs-6 {
   -webkit-animation: none;
