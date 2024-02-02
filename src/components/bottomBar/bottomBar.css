@@ -1,0 +1,247 @@
+.bottomBarContainer {
+  color: #afafaf;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around; /* Adjust as needed */
+  align-items: stretch;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.rectangle {
+  background-color: #22262f;
+  flex-basis: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 20px; /* Adjust padding for smaller screens */
+  display: flex;
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .rectangle {
+    padding: 30px 10px; /* Adjust padding for even smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottomBarContainer {
+    justify-content: center; /* Center items on small screens */
+  }
+
+  .rectangle {
+    flex-direction: column;
+    padding: 20px 10px; /* Adjust padding for small screens */
+  }
+
+  .flex-container-1,
+  .flex-container-2,
+  .flex-container-4,
+  .flex-container-5 {
+    flex-basis: 100%; /* Full width on small screens */
+    text-align: center; /* Center text on small screens */
+    margin-bottom: 20px;
+  }
+}
+
+.num-10-k {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.worldwide-client-alr {
+  text-transform: capitalize;
+  font-family: Playfair Display;
+  font-size: 1.25rem;
+  line-height: 28px;
+}
+
+.flex-container-1 {
+  color: #fff;
+  height: 35%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 59px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  display: flex;
+}
+
+.quick-link {
+  text-transform: capitalize;
+  margin-bottom: 12px;
+  margin-left: 1px;
+}
+
+.home {
+  text-transform: capitalize;
+  color: #afafaf;
+  margin-top: 3px;
+  margin-left: 2px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.about-us {
+  text-transform: capitalize;
+  color: #afafaf;
+  margin-top: 2px;
+  margin-bottom: 1px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.blog-post {
+  text-transform: capitalize;
+  color: #afafaf;
+  margin-top: 1px;
+  margin-left: 2px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.photo-gallery {
+  text-transform: capitalize;
+  color: #afafaf;
+  align-self: flex-end;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.flex-container-2 {
+  height: 20%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 106px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  display: flex;
+}
+
+.get-in-touch {
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 9px;
+}
+
+.contact-us {
+  text-transform: capitalize;
+  margin-top: 4px;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+.our-services {
+  text-transform: capitalize;
+  font-family: Montserrat;
+  font-weight: 400;
+}
+
+
+.address {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.address-thing {
+  text-transform: capitalize;
+  color: #afafaf;
+}
+
+.flex-container-4 {
+  color: #ccc;
+  height: 45%;
+  flex-direction: column;
+  flex-basis: 21%;
+  justify-content: space-between;
+  align-items: stretch;
+  /* margin-bottom: 34px; */
+  margin-top: 0px;
+  font-family: Playfair Display;
+  font-size: .875rem;
+  display: flex;
+  float: left;
+}
+
+.newsletter {
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.flex-container-5 {
+  color: #555;
+  width: 100%;
+  flex-direction: row;
+  flex-basis: 22%;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 2px;
+  font-family: Montserrat;
+  display: flex;
+}
+
+.email-box {
+  height: 100%;
+  background-color: #fff;
+  flex-direction: row;
+  flex-basis: 68%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 18px;
+  line-height: 18px;
+  display: flex;
+}
+
+.enter-your-email {
+  text-transform: capitalize;
+}
+
+.subscribe-frame {
+  color: #fff;
+  height: 100%;
+  background-color: #219d80;
+  flex-direction: row;
+  flex-basis: 32%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+}
+
+.subscribe {
+  text-transform: capitalize;
+}
+
+.email-frame {
+  margin-bottom: 16px;
+  font-family: Montserrat;
+  line-height: 20px;
+}
+
+.follow-me {
+  text-transform: capitalize;
+  color: #fff;
+  margin-top: 4px;
+  margin-left: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.group-3251 {
+  width: 182px;
+  height: 32px;
+  object-fit: cover;
+  margin-left: 2px;
+}
+

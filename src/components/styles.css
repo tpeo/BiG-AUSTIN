@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+.image-container img {
+    display: inline-block; /* Ensures the container size fits the image */
+    border: 20px solid #B6F599; /* You can adjust the border thickness (4px) and color (#000) */
+    border-radius: 50%; /* Makes the border round */
+}
+
+.image-container1 img {
+  display: inline-block; /* Ensures the container size fits the image */
+  border: 15px solid #B6F599; /* You can adjust the border thickness (4px) and color (#000) */
+  border-radius: 50%; /* Makes the border round */
+}
+
+.programs-image-container img {
+  border-radius: 15px;
+  width: 100%;
+}
+.programs-image-container {
+  display: inline-block; /* Ensures the container size fits the image */
+  margin: "auto";
+  border-radius: 15px;
+  box-shadow: 5px 5px 0 rgb(182, 245, 153);
+}
+
+
+
+.ant-carousel .slick-prev, .ant-carousel .slick-prev:hover {
+    color: red !important;
+}
+
+.ant-carousel .slick-prev::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 30px !important; /* Adjust the size of the circle as needed */
+  height: 30px !important; /* Adjust the size of the circle as needed */
+  background-color: transparent !important; /* Change the background color as needed */
+  border: 2px solid blue !important; /* Adjust the border properties as needed */
+  border-radius: 50% !important; /* Creates a circular shape */
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: -1 !important;/* Push the circle behind the arrow */
+}
+
+.prev-arrow{
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    left: -100px;
+}
+
+.next-arrow{
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: -100px;
+}
+
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  color: white;
+}
+
+.squareImage {
+  width: 350;
+  height: 350;
+}
+
+.squareImage1 {
+  width: 200 !important;
+  height: 200 !important;
+}
+
+.links li a{
+  list-style-type: none;
+  text-decoration: none;
+  color: #D9DCD6;
+  font-weight: 300;
+  font-size: 17px;
+  
+}
+
+ul li {
+  margin-top: 5px !important;
+}
+a {
+  list-style-type: none;
+
+}
+
+.aspire a {
+  font-weight: 500 !important;
+  color: #B6F599 !important;
+}
+
+
+.email-frame {
+  margin-bottom: 16px;
+  font-family: Montserrat;
+  line-height: 20px;
+}
+
+.follow-me {
+  text-transform: capitalize;
+  color: #fff;
+  margin-top: 4px;
+  margin-left: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.wrapperLeft {
+  display: flex;
+  align-items: flex-end;
+  margin-top: -110px;
+}
+
+.wrapperLeft img {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+}
+
+.wrapperRight {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -178px; /* Adjust this value as needed */
+}
+
+.wrapperRight img {
+  /* position: fixed; */
+  transform: scaleX(-1);
+  left: 0;
+  bottom: 0;
+}
+
+.bottom{
+  background-color: "#22262f";
+}
+/* media query to remove footer circles */
+
+.input{
+  border-radius: 0;
+  border: none;
+  height: 45px;
+}
+
+input::placeholder {
+  font-family: 'League Spartan', sans-serif;
+  color: black;
+  font-weight: 200;
+}
+
+.greenImage{
+  width: 150;
+  height: 150;
+
+
+}
+.greenImage img{
+  border-radius: 50%;
+
+}
+
+
+.circular-image {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block; /* Ensures the container size fits the image */
+  border-radius: 50%; /* Makes the border round */
+  box-shadow: 5px 5px 0 rgb(182, 245, 153);
+
+}
+
+.circular-image img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover; /* Preserve aspect ratio */
+  
+}
+
+
+.circular-image2 {
+  width: 130px; /* Adjust the size as needed */
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block; /* Ensures the container size fits the image */
+  border-radius: 50%; /* Makes the border round */
+  box-shadow: 5px 5px 0 rgb(182, 245, 153);
+
+}
+
+.circular-image2 img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover; /* Preserve aspect ratio */
+}
+
+
+.circular-image3 {
+  width: 130px; /* Adjust the size as needed */
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block; /* Ensures the container size fits the image */
+  border-radius: 50%; /* Makes the border round */
+
+}
+
+.circular-image3 img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover; /* Preserve aspect ratio */
+}
+
+
+
+
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  /* background: grey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: auto;
+  /* max-height: 100vh; */
+}
+
+
+.navigation-wrapper {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot {
+  border: none;
+  width: 25px;
+  height: 5px;
+  background: #9c9c9c;
+  border-radius: 10%;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot.active {
+  background: white;
+}
+
+
+.dots2 {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.dot2 {
+  border: none;
+  width: 25px;
+  height: 5px;
+  background: #687080;
+  border-radius: 20%;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.dot2:focus {
+  outline: none;
+}
+
+.dot2.active {
+  background: #252A34;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #2C3343;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background round */
+  background-color: #B6F599; /* Sets the background color to green */
+  border: 10px solid #B6F599; /* Adjust thickness by changing the border width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow--left {
+  left: 100px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 100px;
+}
+
+@media only screen and (max-width: 580px) {
+  .arrow--right {
+    right: 20px; /* Adjust the value as needed for your design */
+  }
+  .arrow--left {
+    left: 20px;
+  }
+}
+
+.arrow1 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #2C3343;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background round */
+  background-color: #B6F599; /* Sets the background color to green */
+  border: 10px solid #B6F599; /* Adjust thickness by changing the border width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow1--left {
+  left: 190px;
+}
+
+.arrow1--right {
+  left: auto;
+  right: 190px;
+}
+/* 
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
+} */
+
+.arrow-wrapper {
+  position: relative; 
+}
+
+.arrow2 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0%;
+  /* transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); */
+  fill: #D9DCD6;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background round */
+  background-color: #2C3343; /* Sets the background color to green */
+  border: 10px solid #2C3343; /* Adjust thickness by changing the border width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.arrow2--left {
+  left: 500px;
+}
+
+.arrow2--right {
+  left: auto;
+  right: 500px;
+}
+
+@media screen and (max-width: 592px) {
+  .arrow2--left {
+    left: 40px;
+  }
+  
+  .arrow2--right {
+    left: auto;
+    right: 40px;
+  }
+}
+
+
+
+.dots1 {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.dot1 {
+  border: none;
+  width: 20px;
+  height: 4px;
+  background: #e8ebe6;
+  border-radius: 10%;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.dot1:focus {
+  outline: none;
+}
+
+.dot1.active {
+  background: white;
+}
+
+.square-image img{
+  height: 400px !important;
+  margin: 0 auto;
+}
+
+.square-image{
+  text-align: center;
+  padding: 20px;
+}
+
+.imagecard{
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.imagecard:hover{
+  background-color: #2C3343;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.markDown ul li {
+  font-weight: 300 !important;
+  padding-top: 0px;
+  /* margin-left: 0px; */
+  list-style-type: disc;
+}
+
+.partnersImage img{
+  padding-left: 20px;
+}
+
+.fc .fc-toolbar-title{
+  font-family: "DM Serif Display", serif;
+  font-weight: 300;
+  font-size: 33px;
+  color: #2C3343;
+}
+
+.fc .fc-col-header-cell-cushion{
+  font-family: "League Spartan";
+  font-size: 22px;
+  color: #a3a4ac;
+  padding-left: 7px !important;
+  font-weight: 200;
+}
+
+.fc .fc-daygrid-day-number{
+  font-family: "League Spartan";
+  font-size: 22px;
+  color: #2C3343;
+  padding: 10px;
+  /* font-weight: 200; */
+}
+
+.fc-daygrid-dot-event .fc-event-title{
+  font-family: "League Spartan";
+  color: #2C3343;
+  font-size: 16px;
+  padding-left: 5px;
+  font-weight: 500;
+  white-space: normal !important;
+
+}
+
+.fc-month-view span.fc-title{
+  white-space: normal !important;
+}
+
+.fc-direction-ltr .fc-daygrid-event .fc-event-time{
+  font-family: "League Spartan";
+  color: #2C3343;
+  font-size: 18px;
+}
+
+.fc .fc-daygrid-day.fc-day-today{
+  border: 3px solid #215048;
+  background-color: #cddad8;
+}
+
+.fc .fc-button-primary{
+  font-family: "League Spartan";
+  font-size: 16px;
+}
+
+.fc .fc-button-primary:disabled{
+  background-color: #215048;
+  border-color: #215048;
+}
+
+.fc .fc-button-primary{
+  background-color: #215048;
+  border-color: #215048;
+}
+
+.css-hs4p99-MuiGrid-root>.MuiGrid-item{
+  padding-left: 0px !important;
+}
+
+.css-ahj2mt-MuiTypography-root{
+  font-family: "League Spartan" !important;
+  color: #435058 !important;
+  font-size: 18px !important;
+  padding-left: 8px;
+}
+
+.css-1f2kvjf-MuiFormControlLabel-root{
+  background-color: #eff0ee !important;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.map{
+  border-radius: 15px;
+  box-shadow: rgb(182, 245, 153) 6px 6px 0px;
+  object-fit: cover;
+}
+
+/* .building{
+  border-radius: 15px !important;
+  box-shadow: rgb(182, 245, 153) 5px 5px 0px !important;
+  object-fit: cover !important;
+
+} */
+
+.css-1rxnetw-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 5px !important;
+}
+
+.css-hszxhc-MuiInputBase-root-MuiOutlinedInput-root{
+  border-radius: 5px !important;
+}
+
+.building{
+  width: 350px !important;
+}
