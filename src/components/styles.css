@@ -118,7 +118,7 @@ a {
 .wrapperLeft {
   display: flex;
   align-items: flex-end;
-  margin-top: -110px;
+  margin-top: -117px;
 }
 
 .wrapperLeft img {
@@ -131,7 +131,8 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: -178px; /* Adjust this value as needed */
+  margin-top: -118px; /* Adjust this value as needed */
+  
 }
 
 .wrapperRight img {
@@ -139,6 +140,7 @@ a {
   transform: scaleX(-1);
   left: 0;
   bottom: 0;
+  z-index: 0 !important;
 }
 
 .bottom{
@@ -587,4 +589,33 @@ input::placeholder {
 .css-yb0lig{
   color: white !important;
   font-family: "League Spartan" !important; 
+}
+
+.ctct-gdpr-text{
+  display: none !important;
+}
+
+.ctct-form-defaults{
+  padding: 0px !important;
+}
+
+.ctct-form-label {
+  font-family: "League Spartan" !important; 
+  font-weight: 300 !important;
+}
+
+div.ctct-form-embed form.ctct-form-custom div.ctct-form-field{
+  margin: 0 !important;
+}
+
+div.ctct-form-embed form.ctct-form-custom button.ctct-form-button{
+  padding: 0px !important;
+  font-family: "League Spartan" !important; 
+  font-size: 15px;
+  font-weight: 300 !important;
+  height: 35px !important;
+}
+
+div.ctct-form-embed form.ctct-form-custom input.ctct-form-element{
+  height: 35px !important;
 }

@@ -19,6 +19,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import createClient from '../../client.js';
 import FormComponent from "../form.js";
+import InlineSignUpForm from "../pages/InlineSignUpForm.js";
 
 export default function BottomBar() {
 
@@ -304,7 +305,11 @@ export default function BottomBar() {
                     </Typography>
                   </div>
 
-                  <Box
+                  {/* Here you insert your InlineSignUpForm component */}
+                {/* <InlineSignUpForm /> */}
+                <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
+
+                  {/* <Box
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -312,10 +317,9 @@ export default function BottomBar() {
                       maxWidth: '100%',
                     }}
                   >
-                    {/* <TextField variant="filled" sx={{ color: appTheme.palette.primary.white }} label="Enter Your Email" id="fullWidth" /> */}
                     <input className="input" type="text" placeholder="Enter your email" id="fname" name="fname"></input>
                     <Button sx={{ color: appTheme.palette.primary.white, height: "45px", fontSize: 17, backgroundColor: appTheme.palette.primary.green2, fontWeight: 350, borderRadius: 0, paddingLeft: 4, paddingRight: 4 }}>Subscribe</Button>
-                  </Box>
+                  </Box> */}
                   <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Your email is safe with us, we don’t spam.</Typography>
 
 
@@ -356,11 +360,11 @@ export default function BottomBar() {
         </Grid>
 
         <div className="wrapperLeft">
-          <img width={150} src={require('../images/leftfooter.png')} />
+          <img width={100} src={require('../images/leftfooter.png')} />
         </div>
 
         <div className="wrapperRight">
-          <img width={150} src={require('../images/leftfooter.png')} />
+          <img width={100} src={require('../images/leftfooter.png')} />
         </div>
 
 
