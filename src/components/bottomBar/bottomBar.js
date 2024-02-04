@@ -52,264 +52,278 @@ export default function BottomBar() {
 
 
 
-      <Grid sx={{
-        backgroundColor:"#252A34",
-      }}>
-        <Grid item sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+        <Grid sx={{
           backgroundColor: "#252A34",
-          margin: "auto",
-          paddingBottom: 5,
-          paddingTop: 12
         }}>
+          <Grid item sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#252A34",
+            margin: "auto",
+            paddingBottom: 5,
+            paddingTop: 12,
+            '@media only screen and (max-width: 500px)': {
+              paddingTop: 2, // Adjust the width for smaller screens
+              paddingBottom: 18,
+            },
+          }}>
 
-          <Grid container sx={{ width: "80%" }}>
-            <Grid item xs>
-              <Card
-                sx={{
-                  width: 250,
-                  display: "flex",
-                  backgroundColor: "#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{"padding-right":"10px", "margin-top": "50px" }}>
-                  <ul>
-                    <li>
-                      <Link href="https://maps.app.goo.gl/8WnaWP4Ksy6jBjrC7">
-                      <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
-                          <LocationOnIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocationOnIcon>
-                          <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].address}</Typography></span>
-                        </div>
-                       
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="tel:5129288010">
-                        <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
-                          <LocalPhoneIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocalPhoneIcon>
-                          <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].phone}</Typography></span>
-                        </div>
-
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="mailto:info@bigaustin.org">
-
-                        <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
-                          <EmailIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></EmailIcon>
-                         
-                          <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].email}</Typography></span>
+            <Grid container sx={{ width: "80%" }}>
+              <Grid item xs>
+                <Card
+                  sx={{
+                    width: 250,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="links" style={{
+                    "padding-right": "10px", "margin-top": "50px", "@media (max-width: 768px)": {
+                      "padding-right": "0px",
+                    }
+                  }}>
+                    <ul>
+                      <li>
+                        <Link href="https://maps.app.goo.gl/8WnaWP4Ksy6jBjrC7">
+                          <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
+                            <LocationOnIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocationOnIcon>
+                            <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].address}</Typography></span>
                           </div>
-                          
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
-            </Grid>
-            <Grid item xs>
-              <Card
-                sx={{
-                  width: 140,
-                  display: "flex",
-                  backgroundColor: "#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{ "padding": "10px" }}>
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
-                    >
-                      Quick Links
-                    </Typography>
+
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="tel:5129288010">
+                          <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
+                            <LocalPhoneIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocalPhoneIcon>
+                            <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].phone}</Typography></span>
+                          </div>
+
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="mailto:info@bigaustin.org">
+
+                          <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
+                            <EmailIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></EmailIcon>
+
+                            <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{footerData[0].email}</Typography></span>
+                          </div>
+
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                  <ul>
-                    <li>
-                      <Link href="/">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/about">
+                </Card>
+              </Grid>
+              <Grid item xs>
+                <Card
+                  sx={{
+                    width: 140,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                    '@media only screen and (max-width: 500px)': {
+                      paddingTop: 5, // Adjust the width for smaller screens
+                    },
+                  }}
+                >
+                  <div className="links" style={{ "padding": "10px" }}>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
+                      >
+                        Quick Links
+                      </Typography>
+                    </div>
+                    <ul>
+                      <li>
+                        <Link href="/">
+                          Home
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/about">
+                          About
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services">
+                          How We Help
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/volunteer">
+                          Get Involved
+                        </Link>
+                      </li>
+                      <li className="aspire">
+                        <Link href="/aspire">
+                          Aspire
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Card>
+              </Grid>
+
+              <Grid item xs>
+                <Card
+                  sx={{
+                    width: 140,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                    '@media only screen and (max-width: 500px)': {
+                      paddingTop: 5, // Adjust the width for smaller screens
+                    },
+                  }}
+                >
+                  <div className="links" style={{ "padding": "10px" }}>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
+                      >
                         About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services">
+                      </Typography>
+                    </div>
+                    <ul>
+                      <li>
+                        <Link href="/about">
+                          Who We Are
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/ourimpact">
+                          Our Impact
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/dreamteam">
+                          Dream Team
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Card>
+              </Grid>
+
+              <Grid item xs>
+                <Card
+                  sx={{
+                    width: 140,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="links" style={{ "padding": "10px" }}>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
+                      >
                         How We Help
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/volunteer">
+                      </Typography>
+                    </div>
+                    <ul>
+                      <li>
+                        <Link href="/services">
+                          Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/programs">
+                          Programs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/workshops">
+                          Workshops
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Card>
+              </Grid>
+
+              <Grid item xs>
+                <Card
+                  sx={{
+                    width: 140,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="links" style={{ "padding": "10px" }}>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
+                      >
                         Get Involved
-                      </Link>
-                    </li>
-                    <li className="aspire">
-                      <Link href="/aspire">
-                        Aspire
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
-            </Grid>
-
-            <Grid item xs>
-              <Card
-                sx={{
-                  width: 140,
-                  display: "flex",
-                  backgroundColor: "#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{ "padding": "10px" }}>
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
-                    >
-                      About
-                    </Typography>
+                      </Typography>
+                    </div>
+                    <ul>
+                      <li>
+                        <Link href="/volunteer">
+                          Volunteer
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/partnership">
+                          Partner
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">
+                          Contact Us
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                  <ul>
-                    <li>
-                      <Link href="/about">
-                        Who We Are
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/ourimpact">
-                        Our Impact
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/dreamteam">
-                        Dream Team
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
-            </Grid>
-
-            <Grid item xs>
-              <Card
-                sx={{
-                  width: 140,
-                  display: "flex",
-                  backgroundColor: "#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{ "padding": "10px" }}>
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
-                    >
-                      How We Help
-                    </Typography>
-                  </div>
-                  <ul>
-                    <li>
-                      <Link href="/services">
-                        Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/programs">
-                        Programs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/workshops">
-                        Workshops
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
-            </Grid>
-
-            <Grid item xs>
-              <Card
-                sx={{
-                  width: 140,
-                  display: "flex",
-                  backgroundColor:"#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{ "padding": "10px" }}>
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
-                    >
-                      Get Involved
-                    </Typography>
-                  </div>
-                  <ul>
-                    <li>
-                      <Link href="/volunteer">
-                        Volunteer
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/partnership">
-                        Partner
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">
-                        Contact Us
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Card>
-            </Grid>
+                </Card>
+              </Grid>
 
 
 
-            <Grid item xs>
-{/* <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div> */}
-              <Card
-                sx={{
-                  width: 280,
-                  display: "flex",
-                  backgroundColor:"#252A34",
-                  boxShadow: "none",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="links" style={{ "padding": "10px" }}>
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
-                    >
-                      Newsletter
-                    </Typography>
-                  </div>
+              <Grid item xs>
+                {/* <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div> */}
+                <Card
+                  sx={{
+                    width: 280,
+                    display: "flex",
+                    backgroundColor: "#252A34",
+                    boxShadow: "none",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div className="links" style={{ "padding": "10px" }}>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mb: 3, color: appTheme.palette.primary.white }}
+                      >
+                        Newsletter
+                      </Typography>
+                    </div>
 
-                  {/* Here you insert your InlineSignUpForm component */}
-                {/* <InlineSignUpForm /> */}
-                <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
+                    {/* Here you insert your InlineSignUpForm component */}
+                    {/* <InlineSignUpForm /> */}
+                    <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
 
-                  {/* <Box
+                    {/* <Box
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -320,62 +334,62 @@ export default function BottomBar() {
                     <input className="input" type="text" placeholder="Enter your email" id="fname" name="fname"></input>
                     <Button sx={{ color: appTheme.palette.primary.white, height: "45px", fontSize: 17, backgroundColor: appTheme.palette.primary.green2, fontWeight: 350, borderRadius: 0, paddingLeft: 4, paddingRight: 4 }}>Subscribe</Button>
                   </Box> */}
-                  <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Your email is safe with us, we don’t spam.</Typography>
+                    <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Your email is safe with us, we don’t spam.</Typography>
 
 
 
-                  <div>
-                    <Typography
-                      variant="h1"
-                      sx={{ fontWeight: 550, padding: 0, fontSize: 17, mt: 3, mb: 2, color: appTheme.palette.primary.white }}
-                    >
-                      Follow Us
-                    </Typography>
+                    <div>
+                      <Typography
+                        variant="h1"
+                        sx={{ fontWeight: 550, padding: 0, fontSize: 17, mt: 3, mb: 2, color: appTheme.palette.primary.white }}
+                      >
+                        Follow Us
+                      </Typography>
+                    </div>
+
+                    <Link href={footerData[0].twitterLink} style={{ textDecoration: 'none' }} target="_blank">
+                      <TwitterIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></TwitterIcon>
+                    </Link>
+                    <Link href={footerData[0].instaLink} style={{ textDecoration: 'none' }} target="_blank">
+                      <InstagramIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></InstagramIcon>
+                    </Link>
+
+                    <Link href={footerData[0].pinterestLink} style={{ textDecoration: 'none' }} target="_blank">
+                      <FacebookIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></FacebookIcon>
+                    </Link>
+
+                    <Link href={footerData[0].ytLink} style={{ textDecoration: 'none' }} target="_blank">
+                      <LinkedInIcon style={{ border: '4px solid #B6F599', width: 30, height: 30 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LinkedInIcon>
+                    </Link>
+
                   </div>
-
-                  <Link href={footerData[0].twitterLink} style={{ textDecoration: 'none' }} target="_blank">
-                    <TwitterIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></TwitterIcon>
-                  </Link>
-                  <Link href={footerData[0].instaLink} style={{ textDecoration: 'none' }} target="_blank">
-                    <InstagramIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></InstagramIcon>
-                  </Link>
-
-                  <Link href={footerData[0].pinterestLink} style={{ textDecoration: 'none' }} target="_blank">
-                    <FacebookIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></FacebookIcon>
-                  </Link>
-                  
-                  <Link href={footerData[0].ytLink} style={{ textDecoration: 'none' }} target="_blank">
-                    <LinkedInIcon style={{ border: '4px solid #B6F599', width: 30, height: 30 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LinkedInIcon>
-                  </Link>
-
-                </div>
-              </Card>
+                </Card>
+              </Grid>
             </Grid>
+
+            {/* <FormComponent/> */}
+
+
+
           </Grid>
 
-          {/* <FormComponent/> */}
+          <div className="wrapperLeft">
+            <img width={100} src={require('../images/leftfooter.png')} />
+          </div>
+
+          <div className="wrapperRight">
+            <img width={100} src={require('../images/leftfooter.png')} />
+          </div>
 
 
-  
+
         </Grid>
 
-        <div className="wrapperLeft">
-          <img width={100} src={require('../images/leftfooter.png')} />
-        </div>
-
-        <div className="wrapperRight">
-          <img width={100} src={require('../images/leftfooter.png')} />
-        </div>
-
-
-
-      </Grid>
 
 
 
 
-
-)}
+      )}
     </ThemeProvider>
 
 
