@@ -178,7 +178,7 @@ export default function Home(props) {
         <div style={{ height: "100vh" }}>
           <NavBar />
 
-          <Grid component="main" sx={{ paddingBottom: 10, backgroundImage: `url(${urlFor(homeData[0].backgroundImage).url()})`, backgroundSize: 'cover', height: "95vh" }}>
+          <Grid component="main" sx={{ paddingBottom: 15, backgroundImage: `url(${urlFor(homeData[0].backgroundImage).url()})`, backgroundSize: 'cover'}}>
             <Grid container justifyContent="center" sx={{ paddingTop: "60px" }}>
               <CssBaseline />
               <Grid container direction="row" sx={{ mt: 15, textAlign: "center", width: 800 }}>
