@@ -100,7 +100,13 @@ ul li a:hover{
 
 }
 
+.css-zqqkfz-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  background-color: #435058 !important;
+}
 
+.css-145thn8-MuiButtonBase-root-MuiListItemButton-root{
+  color: white !important;
+}
 
 .jEchia a {
   font-family: 'League Spartan', sans-serif;
@@ -205,10 +211,3 @@ header {
   font-size: 18px !important;
 }
 
-.css-zqqkfz-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
-  background-color: #435058 !important;
-}
-
-.css-145thn8-MuiButtonBase-root-MuiListItemButton-root{
-  color: white !important;
-}

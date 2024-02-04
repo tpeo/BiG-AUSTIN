@@ -137,6 +137,9 @@ export default function Lending(props) {
                                             '&:hover': {
                                                 fontWeight: 700
                                             },
+                                            '@media only screen and (max-width: 600px)': {
+                                                marginBottom: 2, // Adjust the width for smaller screens
+                                            },
                                         }}>
                                         Schedule an Appointment
                                     </Button>
