@@ -420,21 +420,24 @@ export default function Partners(props) {
 
 
                         <Grid container direction="column" alignItems="center">
-                        <Link to={partnersData[0].partnersButton} target="_blank" style={{ textDecoration: 'none' }}>
+                            <Link to={partnersData[0].partnersButton} target="_blank" style={{ textDecoration: 'none' }}>
 
-                            <Button
-                                width="200"
-                                variant="contained"
-                                disableElevation
-                                sx={{
-                                    color: appTheme.palette.primary.white, fontSize: 20, mb: 12, fontWeight: 500,
-                                    backgroundColor: appTheme.palette.primary.green2, height: 50,
-                                    '&:hover': {
-                                        fontWeight: 700
-                                    },
-                                }}>
-                                Partner With Us
-                            </Button>
+                                <Button
+                                    width="200"
+                                    variant="contained"
+                                    disableElevation
+                                    sx={{
+                                        color: appTheme.palette.primary.white, fontSize: 20, mb: 12, fontWeight: 500,
+                                        backgroundColor: appTheme.palette.primary.green2, height: 50,
+                                        '&:hover': {
+                                            fontWeight: 700,
+                                            backgroundColor: appTheme.palette.primary.green3,
+                                            color: appTheme.palette.primary.white,
+                                            transition: "all 0.3s ease",
+                                        },
+                                    }}>
+                                    Partner With Us
+                                </Button>
                             </Link>
                         </Grid>
                         <BottomBar />

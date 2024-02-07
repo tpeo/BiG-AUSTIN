@@ -138,9 +138,9 @@ export default function SkillsDev(props) {
 
 
                                     <Typography variant="h2" sx={{ textAlign: "left", mb: .3, fontSize: 20, fontWeight: 300, color: appTheme.palette.primary.space }}>
-                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={skillsData[0].rightParagraph} />
+                                        <ReactMarkdown rehypePlugins={[rehypeRaw]} children={skillsData[0].rightParagraph} />
                                     </Typography>
-                                    
+
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -158,9 +158,9 @@ export default function SkillsDev(props) {
                         <Grid sx={{ height: "auto", width: "45%", paddingTop: 8 }}>
                             <Typography variant="h2" sx={{ fontSize: 25, fontWeight: 400, textAlign: "center", color: appTheme.palette.primary.white, mb: 4 }}>{skillsData[0].blub1}</Typography>
                             <Typography variant="h2" sx={{ fontSize: 20, textAlign: "left", color: appTheme.palette.primary.white, mb: 3 }}>
-                            <ReactMarkdown rehypePlugins={[rehypeRaw]} children={skillsData[0].blub2} />
+                                <ReactMarkdown rehypePlugins={[rehypeRaw]} children={skillsData[0].blub2} />
 
-                                </Typography>
+                            </Typography>
                         </Grid>
 
 
@@ -189,21 +189,24 @@ export default function SkillsDev(props) {
                             mt: 2,
                             mb: 8
                         }}>
-                         <Link to={skillsData[0].buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
+                            <Link to={skillsData[0].buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
 
-                            <Button
-                                width="150"
-                                variant="contained"
-                                disableElevation
-                                sx={{
-                                    color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
-                                    backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
-                                    '&:hover': {
-                                        fontWeight: 700
-                                    },
-                                }}>
-                                Register Here
-                            </Button>
+                                <Button
+                                    width="150"
+                                    variant="contained"
+                                    disableElevation
+                                    sx={{
+                                        color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
+                                        backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
+                                        '&:hover': {
+                                            fontWeight: 700,
+                                            backgroundColor: appTheme.palette.primary.green3,
+                                            color: appTheme.palette.primary.white,
+                                            transition: "all 0.3s ease",
+                                        },
+                                    }}>
+                                    Register Here
+                                </Button>
                             </Link>
                             <img width={40} src={require('../images/decor.png')} />
                         </Grid>

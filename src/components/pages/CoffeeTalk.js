@@ -105,7 +105,10 @@ export default function CoffeeTalk(props) {
                                                 color: appTheme.palette.primary.white, fontSize: 17, fontWeight: 500,
                                                 backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 40,
                                                 '&:hover': {
-                                                    fontWeight: 700
+                                                    fontWeight: 700,
+                                                    backgroundColor: appTheme.palette.primary.green3,
+                                                    color: appTheme.palette.primary.white,
+                                                    transition: "all 0.3s ease",
                                                 },
                                             }}>
                                             Join Our Coffee Talks

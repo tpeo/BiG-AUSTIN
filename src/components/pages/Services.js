@@ -151,7 +151,10 @@ export default function Services(props) {
                             color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500, ml: 7.5,
                             backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                             '&:hover': {
-                              fontWeight: 700
+                              fontWeight: 700,
+                              backgroundColor: appTheme.palette.primary.green3,
+                              color: appTheme.palette.primary.white,
+                              transition: "all 0.3s ease",
                             },
                           }}>
                           Learn More
@@ -212,7 +215,10 @@ export default function Services(props) {
                             color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500, ml: 7.5,
                             backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                             '&:hover': {
-                              fontWeight: 700
+                              fontWeight: 700,
+                              backgroundColor: appTheme.palette.primary.green3,
+                              color: appTheme.palette.primary.white,
+                              transition: "all 0.3s ease",
                             },
                           }}>
                           Learn More
@@ -272,7 +278,10 @@ export default function Services(props) {
                             color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500, ml: 7.5,
                             backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                             '&:hover': {
-                              fontWeight: 700
+                              fontWeight: 700,
+                              backgroundColor: appTheme.palette.primary.green3,
+                              color: appTheme.palette.primary.white,
+                              transition: "all 0.3s ease",
                             },
                           }}>
                           Learn More
@@ -331,7 +340,10 @@ export default function Services(props) {
                         color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500,
                         backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                         '&:hover': {
-                          fontWeight: 700
+                          fontWeight: 700,
+                          backgroundColor: appTheme.palette.primary.green3,
+                          color: appTheme.palette.primary.white,
+                          transition: "all 0.3s ease",
                         },
                       }}>
                       Learn More

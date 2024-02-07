@@ -258,7 +258,10 @@ export default function Workshops(props) {
                               color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
                               backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
                               '&:hover': {
-                                fontWeight: 700
+                                fontWeight: 700,
+                                backgroundColor: appTheme.palette.primary.green3,
+                                color: appTheme.palette.primary.white,
+                                transition: "all 0.3s ease",
                               },
                             }}>
                             Register Now
@@ -356,7 +359,10 @@ export default function Workshops(props) {
                               ml: 3, mb: 4, mt: 2, color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500,
                               backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                               '&:hover': {
-                                fontWeight: 700
+                                fontWeight: 700,
+                                backgroundColor: appTheme.palette.primary.green3,
+                                color: appTheme.palette.primary.white,
+                                transition: "all 0.3s ease",
                               },
                             }}>
                             Learn More

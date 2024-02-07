@@ -69,7 +69,7 @@ export default function Programs(props) {
                     </Grid>
 
                     {programData[0].programs.map((item, index) => (
-                
+
                         <Grid sx={{
                             width: "100%",
                             display: "flex",
@@ -129,7 +129,10 @@ export default function Programs(props) {
                                                                 fontWeight: 500,
                                                                 backgroundColor: appTheme.palette.primary.green2,
                                                                 '&:hover': {
-                                                                    fontWeight: 700
+                                                                    fontWeight: 700,
+                                                                    backgroundColor: appTheme.palette.primary.green3,
+                                                                    color: appTheme.palette.primary.white,
+                                                                    transition: "all 0.3s ease",
                                                                 },
                                                             }}
                                                         >

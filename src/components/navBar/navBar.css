@@ -39,7 +39,7 @@ ul li a {
 }
 
 ul li a:hover{
-  color: #219D80 !important;
+  color: #B6F599 !important;
 }
 
 
@@ -47,9 +47,9 @@ ul li a:hover{
   letter-spacing: 1px;
 }
 
-.ldSkFT > div:hover {
-  color: #2bf8c8;
-}
+/* .ldSkFT > div:hover {
+  color: #B6F599;
+} */
 
 .logo{
   margin-bottom: 15px;
@@ -115,17 +115,31 @@ ul li a:hover{
 
 }
 
-.jEchia:hover{
-  /* color: #219D80 !important; */
-  color: #2bf8c8;
+.jEchia:hover {
+  color: #B6F599 !important;
+  text-shadow: none !important; /* Remove any unwanted text shadow */
+  opacity: 1 !important;
+  /* Add any other properties you want to reset or adjust */
 }
-
 .deePyz:hover{
-  color: #2bf8c8;
+  color: #B6F599 !important;
+  text-shadow: none !important; /* Remove any unwanted text shadow */
+  opacity: 1 !important;
 }
 
 .kpabHS:hover{
-  color: #2bf8c8;
+  color: #B6F599 !important;
+  text-shadow: none !important; /* Remove any unwanted text shadow */
+  opacity: 1 !important;
+}
+
+.kCkDRK {
+  transition: opacity 0.3s ease, background-color 0.3s ease !important; /* Add transition for opacity and background-color */
+}
+.kCkDRK:hover{
+  opacity: 1 !important;
+  background-color: #B6F599 !important;
+
 }
 /* .src__ContentGroupContainer-sc-178mgjs-6 {
   -webkit-animation: none;
@@ -211,3 +225,10 @@ header {
   font-size: 18px !important;
 }
 
+
+
+@media (min-width: 768px) {
+  .ldSkFT{
+    grid-template-columns: 120px 140px 180px 130px 120px 170px !important;
+  }
+}

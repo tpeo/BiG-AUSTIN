@@ -45,6 +45,29 @@ export default function BottomBar() {
   }, []//dependency array 
   )
 
+  // useEffect(() => {
+  //   // Code to execute after component is mounted
+  //   if (window.ctctSignupFormObj) {
+  //     window.ctctSignupFormObj.loadForm('d5b9e5f7-9420-4053-a13f-0a884308b4a3');
+  //   }
+  // }, []); // Empty dependency array ensures this effect runs only once after the initial render
+
+  // window.addEventListener("DOMContentLoaded", () => { // when the page has loaded
+  //   container = document.getElementById("orderhtml");
+  //   const pickupDiv = document.getElementById("pickupDiv");
+  //   const deliveryDiv = document.getElementById("deliveryDiv");
+  //   container.addEventListener("click", (event) => {
+  //     const tgt = event.target;
+  //     if (!tgt.matches("[name=chooseDiv]")) return; // not a radio
+  //     const delivery = tgt.id === "delivery";
+  //     deliveryDiv.hidden = !delivery;
+  //     pickupDiv.hidden = delivery
+  //   })
+  // })
+
+
+  
+
 
   return (
     <ThemeProvider theme={appTheme}>
@@ -319,7 +342,7 @@ export default function BottomBar() {
                       </Typography>
                     </div>
 
-                    {/* Here you insert your InlineSignUpForm component */}
+                    {/*signup-form-widget.min.js:30 Div for inline form "Inline Form Created 2022/05/02, 02:15:33 PM" is missing. Was inline code installed? */}
                     {/* <InlineSignUpForm /> */}
                     <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
 

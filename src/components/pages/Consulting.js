@@ -18,7 +18,7 @@ import imageUrlBuilder from '@sanity/image-url'
 const builder = imageUrlBuilder(createClient)
 
 function urlFor(source) {
-    return builder.image(source)
+  return builder.image(source)
 }
 
 
@@ -114,9 +114,12 @@ export default function Consulting(props) {
                     disableElevation
                     sx={{
                       color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500,
-                      backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35, mt:2,
+                      backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35, mt: 2,
                       '&:hover': {
-                        fontWeight: 700
+                        fontWeight: 700,
+                        backgroundColor: appTheme.palette.primary.green3,
+                        color: appTheme.palette.primary.white,
+                        transition: "all 0.3s ease",
                       },
                     }}>
                     Schedule an Appointment
@@ -193,7 +196,7 @@ export default function Consulting(props) {
                         variant="h2"
                         sx={{ textAlign: "center", fontSize: 17, mb: 1, width: 220 }}
                       >
-                         {consultingData[0].card1text}
+                        {consultingData[0].card1text}
                       </Typography>
                     </div>
 
@@ -237,7 +240,7 @@ export default function Consulting(props) {
                         variant="h2"
                         sx={{ textAlign: "center", fontSize: 17, mb: 1, width: 220 }}
                       >
-                         {consultingData[0].card2text}
+                        {consultingData[0].card2text}
                       </Typography>
                     </div>
 
@@ -281,7 +284,7 @@ export default function Consulting(props) {
                         variant="h2"
                         sx={{ textAlign: "center", fontSize: 17, mb: 1, width: 220 }}
                       >
-                         {consultingData[0].card3text}
+                        {consultingData[0].card3text}
                       </Typography>
                     </div>
 

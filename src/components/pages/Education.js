@@ -19,7 +19,7 @@ import imageUrlBuilder from '@sanity/image-url'
 const builder = imageUrlBuilder(createClient)
 
 function urlFor(source) {
-    return builder.image(source)
+  return builder.image(source)
 }
 
 export default function Consulting(props) {
@@ -91,36 +91,39 @@ export default function Consulting(props) {
               <Typography variant="h2" sx={{ fontSize: 25, fontWeight: 400, textAlign: "center", color: appTheme.palette.primary.white, mb: 2 }}>{educData[0].boldText1}</Typography>
               <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: appTheme.palette.primary.white, mb: 4 }}>{educData[0].paragraph1}</Typography>
               <Typography variant="h2" sx={{ fontSize: 25, fontWeight: 500, textAlign: "center", color: appTheme.palette.primary.white, mb: 2 }}>{educData[0].boldText2}</Typography>
-              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: appTheme.palette.primary.white}}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={educData[0].paragraph2}/> </Typography>
+              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: appTheme.palette.primary.white }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={educData[0].paragraph2} /> </Typography>
             </Grid>
 
             <Grid sx={{
-                display: 'flex',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                fontSize: 30,
-                fontWeight: 500,
-                padding: 0,
-                mt: 5,
-                mb: 8
-              }}>
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              fontSize: 30,
+              fontWeight: 500,
+              padding: 0,
+              mt: 5,
+              mb: 8
+            }}>
               <Link to={educData[0].buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
-                  <Button
-                    width="150"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
-                      backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
-                      '&:hover': {
-                        fontWeight: 700
-                      },
-                    }}>
-                    Upcoming Sessions
-                  </Button>
-                </Link>
-                <img width={40} src={require('../images/decor.png')} />
-              </Grid>
+                <Button
+                  width="150"
+                  variant="contained"
+                  disableElevation
+                  sx={{
+                    color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
+                    backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
+                    '&:hover': {
+                      fontWeight: 700,
+                      backgroundColor: appTheme.palette.primary.green3,
+                      color: appTheme.palette.primary.white,
+                      transition: "all 0.3s ease",
+                    },
+                  }}>
+                  Upcoming Sessions
+                </Button>
+              </Link>
+              <img width={40} src={require('../images/decor.png')} />
+            </Grid>
           </Grid>
 
 
@@ -135,50 +138,50 @@ export default function Consulting(props) {
             mb: 12
           }}>
             <Grid container spacing={5}>
-            {educData[0].skills.map((item) => (
-              <Grid item xs>
-                {/* {console.log(item.skills)} */}
-              <Card
-                sx={{
-                  backgroundColor: appTheme.palette.primary.white,
-                  width: 250,
-                  borderRadius: 1,
-                  margin:"auto",
-                  display: "flex",
-                  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-                  flexDirection: "column",
-                }}
-              >
-                <div style={{ "margin-bottom": "10px"}}>
-                  <img height={20} src={urlFor(item.skills.image).url()} />
-                </div>
-
-                <div style={{ "padding": "10px"}}>
-                <div>
-                  <Typography
-                    variant="h1"
-                    sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 2 }}
+              {educData[0].skills.map((item) => (
+                <Grid item xs>
+                  {/* {console.log(item.skills)} */}
+                  <Card
+                    sx={{
+                      backgroundColor: appTheme.palette.primary.white,
+                      width: 250,
+                      borderRadius: 1,
+                      margin: "auto",
+                      display: "flex",
+                      boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+                      flexDirection: "column",
+                    }}
                   >
-                    {item.skills.title}
-                  </Typography>
-                </div>
+                    <div style={{ "margin-bottom": "10px" }}>
+                      <img height={20} src={urlFor(item.skills.image).url()} />
+                    </div>
 
-                <div>
-                  <Typography
-                    variant="h2"
-                    sx={{fontSize: 17, mb: 1,  width: 220 }}
-                  >
-                    {item.skills.description}
-                  </Typography>
-                </div>
-                </div>
+                    <div style={{ "padding": "10px" }}>
+                      <div>
+                        <Typography
+                          variant="h1"
+                          sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 2 }}
+                        >
+                          {item.skills.title}
+                        </Typography>
+                      </div>
 
-                <Grid item sx={{ textAlign: 'right', paddingRight: 0, mt: 1}}>
-                    <img width={35} src={require('../images/decor.png')} />
+                      <div>
+                        <Typography
+                          variant="h2"
+                          sx={{ fontSize: 17, mb: 1, width: 220 }}
+                        >
+                          {item.skills.description}
+                        </Typography>
+                      </div>
+                    </div>
+
+                    <Grid item sx={{ textAlign: 'right', paddingRight: 0, mt: 1 }}>
+                      <img width={35} src={require('../images/decor.png')} />
+                    </Grid>
+                  </Card>
                 </Grid>
-              </Card>
-            </Grid>
-            ))}
+              ))}
             </Grid>
           </Grid>
 

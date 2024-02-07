@@ -355,7 +355,7 @@ export default function NavBar() {
                 </ul>
               </ContentGroup>
 
-              <ContentGroup fontFamily="League Spartan, sans-serif" title="CALENDAR" rootUrl="workshops" />
+              <ContentGroup fontFamily="League Spartan, sans-serif" title="WORKSHOPS" rootUrl="workshops" />
               <ContentGroup title="DONATE" rootUrl="donate" background="white" />
 
               <ContentGroup title="CONTACT" rootUrl="/contact" background="appTheme.palette.primary.white" />

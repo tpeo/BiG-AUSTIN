@@ -30,22 +30,22 @@ function urlFor(source) {
 function Arrow(props) {
     const disabeld = props.disabled ? " arrow--disabled" : ""
     return (
-      <svg
-        onClick={props.onClick}
-        className={`arrow ${props.left ? "arrow--left" : "arrow--right"
-          } ${disabeld}`}
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-      >
-        {props.left && (
-          <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-        )}
-        {!props.left && (
-          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-        )}
-      </svg>
+        <svg
+            onClick={props.onClick}
+            className={`arrow ${props.left ? "arrow--left" : "arrow--right"
+                } ${disabeld}`}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+        >
+            {props.left && (
+                <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+            )}
+            {!props.left && (
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+            )}
+        </svg>
     )
-  }
+}
 
 
 // Custom arrow components
@@ -143,27 +143,30 @@ export default function Aspire(props) {
                             <Typography variant="h2" sx={{ fontSize: 22, width: "60%", margin: "0 auto", textAlign: "center", mb: 7 }}>{aspireData[0].mainBlurb}</Typography>
 
 
-                            <div className="programs-image-container" style={{ width: "50%", display: "flex",  margin: "0 auto", justifyContent: "center" }}>
+                            <div className="programs-image-container" style={{ width: "50%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
                                 {/* <img src={urlFor(aspireData[0].headerImage).url()} /> */}
                                 <iframe style={{ borderRadius: '10px' }} width="100%" height="315" src={aspireData[0].headingVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                             </div>
 
                             <Grid container justifyContent="center" alignItems="center" sx={{ mb: 3, mt: 5 }}>
                                 <Link to={""} target="_blank" style={{ textDecoration: 'none' }}>
-                                <Button
-                                    width="200"
-                                    height="40"
-                                    variant="contained"
-                                    disableElevation
-                                    sx={{
-                                        color: appTheme.palette.primary.white, fontSize: 20, fontWeight: 500, mt: 2,
-                                        backgroundColor: appTheme.palette.primary.green2, borderRadius: 1, height: 50, width: 220,
-                                        '&:hover': {
-                                            fontWeight: 700
-                                        },
-                                    }}>
-                                    Sign up for Updates
-                                </Button>
+                                    <Button
+                                        width="200"
+                                        height="40"
+                                        variant="contained"
+                                        disableElevation
+                                        sx={{
+                                            color: appTheme.palette.primary.white, fontSize: 20, fontWeight: 500, mt: 2,
+                                            backgroundColor: appTheme.palette.primary.green2, borderRadius: 1, height: 50, width: 220,
+                                            '&:hover': {
+                                                fontWeight: 700,
+                                                backgroundColor: appTheme.palette.primary.green3,
+                                                color: appTheme.palette.primary.white,
+                                                transition: "all 0.3s ease",
+                                            },
+                                        }}>
+                                        Sign up for Updates
+                                    </Button>
                                 </Link>
 
                             </Grid>
@@ -335,7 +338,7 @@ export default function Aspire(props) {
 
 
 
-                    <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.green4, paddingBottom: 20, textAlign: "center", color: "white"}}>
+                    <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.green4, paddingBottom: 20, textAlign: "center", color: "white" }}>
                         <h2 style={{ color: appTheme.palette.primary.blue1, fontWeight: 800, paddingTop: 50, paddingBottom: 20 }}>Recent News</h2>
                         <div className="navigation-wrapper">
                             <div ref={sliderRef} className="keen-slider">
@@ -343,15 +346,15 @@ export default function Aspire(props) {
                                     <div className="keen-slider__slide number-slide1">
                                         {/* {console.log("news", item)} */}
                                         <Grid container justifyContent="center" alignItems="center" sx={{ mb: 5, backgroundColor: appTheme.palette.primary.green4 }}>
-                                       
-                                            <Grid container direction="row" sx={{ width: "50%" }}>
-                                            <h2 style={{ color: appTheme.palette.primary.blue1, textAlign: "left", fontSize: 23, fontWeight: 800, paddingTop: 50, paddingBottom: 2 }}>{item.news.title}</h2>
-                                            
-                                            <Typography variant="h2" sx={{ textAlign: "center",fontWeight: 500, color: appTheme.palette.primary.blue1, fontSize: 17, mb: 3, mt: 1, textTransform: "uppercase"}}>{item.news.date}</Typography>
 
-                                                    <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
-                                                        <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1}}>{item.news.description}</Typography>
-                                                    </Grid>
+                                            <Grid container direction="row" sx={{ width: "50%" }}>
+                                                <h2 style={{ color: appTheme.palette.primary.blue1, textAlign: "left", fontSize: 23, fontWeight: 800, paddingTop: 50, paddingBottom: 2 }}>{item.news.title}</h2>
+
+                                                <Typography variant="h2" sx={{ textAlign: "center", fontWeight: 500, color: appTheme.palette.primary.blue1, fontSize: 17, mb: 3, mt: 1, textTransform: "uppercase" }}>{item.news.date}</Typography>
+
+                                                <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
+                                                    <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1 }}>{item.news.description}</Typography>
+                                                </Grid>
                                             </Grid>
                                         </Grid>
 

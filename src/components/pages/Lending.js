@@ -135,7 +135,10 @@ export default function Lending(props) {
                                             color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500,
                                             backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35, mr: 2,
                                             '&:hover': {
-                                                fontWeight: 700
+                                                fontWeight: 700,
+                                                backgroundColor: appTheme.palette.primary.green3,
+                                                color: appTheme.palette.primary.white,
+                                                transition: "all 0.3s ease",
                                             },
                                             '@media only screen and (max-width: 600px)': {
                                                 marginBottom: 2, // Adjust the width for smaller screens
@@ -155,7 +158,10 @@ export default function Lending(props) {
                                             color: appTheme.palette.primary.white, fontSize: 15, fontWeight: 500,
                                             backgroundColor: appTheme.palette.primary.green2, borderRadius: .7, height: 35,
                                             '&:hover': {
-                                                fontWeight: 700
+                                                fontWeight: 700,
+                                                backgroundColor: appTheme.palette.primary.green3,
+                                                color: appTheme.palette.primary.white,
+                                                transition: "all 0.3s ease",
                                             },
                                         }}>
                                         Start your Application
@@ -547,7 +553,7 @@ export default function Lending(props) {
                                             <div >
                                                 <Typography
                                                     variant="h1"
-                                                    sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 1, mt: 3}}
+                                                    sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 1, mt: 3 }}
                                                 >
                                                     {lendingData[0].card1title}
                                                 </Typography>
@@ -559,7 +565,7 @@ export default function Lending(props) {
                                                     variant="h2"
                                                     sx={{ textAlign: "left", fontSize: 17, mb: 1, width: 220 }}
                                                 >
-                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card1text} />                                                
+                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card1text} />
                                                 </Typography>
                                             </div>
                                         </Card>
@@ -596,7 +602,7 @@ export default function Lending(props) {
                                                     variant="h2"
                                                     sx={{ textAlign: "left", fontSize: 17, mb: 1, width: 220 }}
                                                 >
-                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card2text} />                                                
+                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card2text} />
                                                 </Typography>
                                             </div>
                                         </Card>
@@ -631,7 +637,7 @@ export default function Lending(props) {
                                                     variant="h2"
                                                     sx={{ textAlign: "left", fontSize: 17, mb: 1, width: 220 }}
                                                 >
-                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card3text} />                                                
+                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].card3text} />
                                                 </Typography>
                                             </div>
                                         </Card>

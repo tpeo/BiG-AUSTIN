@@ -178,7 +178,7 @@ export default function Home(props) {
         <div style={{ height: "100vh" }}>
           <NavBar />
 
-          <Grid component="main" sx={{ paddingBottom: 15, backgroundImage: `url(${urlFor(homeData[0].backgroundImage).url()})`, backgroundSize: 'cover'}}>
+          <Grid component="main" sx={{ paddingBottom: 15, backgroundImage: `url(${urlFor(homeData[0].backgroundImage).url()})`, backgroundSize: 'cover' }}>
             <Grid container justifyContent="center" sx={{ paddingTop: "60px" }}>
               <CssBaseline />
               <Grid container direction="row" sx={{ mt: 15, textAlign: "center", width: 800 }}>
@@ -196,7 +196,10 @@ export default function Home(props) {
                   sx={{
                     mt: 6, color: appTheme.palette.primary.white, backgroundColor: appTheme.palette.primary.green2, fontSize: 20, mb: 2, fontWeight: 500,
                     '&:hover': {
-                      fontWeight: 700
+                      fontWeight: 700,
+                      backgroundColor: appTheme.palette.primary.green3,
+                      color: appTheme.palette.primary.white,
+                      transition: "all 0.3s ease",
                     },
                   }}>
                   {homeData[0].mainButton}
@@ -429,25 +432,28 @@ export default function Home(props) {
                       {homeData[0].column1blurb}
                     </Typography>
                   </div>
-                    {/* Adjust the button width */}
-                    <Button
-                      width="100%"
-                      variant="contained"
-                      disableElevation
-                      sx={{
+                  {/* Adjust the button width */}
+                  <Button
+                    width="100%"
+                    variant="contained"
+                    disableElevation
+                    sx={{
+                      color: appTheme.palette.primary.white,
+                      fontSize: 18,
+                      fontWeight: 500,
+                      height: 40,
+                      mt: 3,
+                      backgroundColor: appTheme.palette.primary.green2,
+                      '&:hover': {
+                        fontWeight: 700,
+                        backgroundColor: appTheme.palette.primary.green3,
                         color: appTheme.palette.primary.white,
-                        fontSize: 18,
-                        fontWeight: 500,
-                        height: 40,
-                        mt: 3,
-                        backgroundColor: appTheme.palette.primary.green2,
-                        '&:hover': {
-                          fontWeight: 700
-                        },
-                      }}
-                    >
-                      Learn More
-                    </Button>
+                        transition: "all 0.3s ease",
+                      },
+                    }}
+                  >
+                    Learn More
+                  </Button>
                 </Grid>
                 <Grid item xs
                   sx={{
@@ -477,25 +483,28 @@ export default function Home(props) {
                       {homeData[0].column2blurb}
                     </Typography>
                   </div>
-                    {/* Adjust the button width */}
-                    <Button
-                      width="100%"
-                      variant="contained"
-                      disableElevation
-                      sx={{
+                  {/* Adjust the button width */}
+                  <Button
+                    width="100%"
+                    variant="contained"
+                    disableElevation
+                    sx={{
+                      color: appTheme.palette.primary.white,
+                      fontSize: 18,
+                      fontWeight: 500,
+                      height: 40,
+                      mt: 3,
+                      backgroundColor: appTheme.palette.primary.green2,
+                      '&:hover': {
+                        fontWeight: 700,
+                        backgroundColor: appTheme.palette.primary.green3,
                         color: appTheme.palette.primary.white,
-                        fontSize: 18,
-                        fontWeight: 500,
-                        height: 40,
-                        mt: 3,
-                        backgroundColor: appTheme.palette.primary.green2,
-                        '&:hover': {
-                          fontWeight: 700
-                        },
-                      }}
-                    >
-                      Learn More
-                    </Button>
+                        transition: "all 0.3s ease",
+                      },
+                    }}
+                  >
+                    Learn More
+                  </Button>
                 </Grid>
                 <Grid item xs
                   sx={{
@@ -525,27 +534,30 @@ export default function Home(props) {
                       {homeData[0].column3blurb}
                     </Typography>
                   </div>
-                    {/* Adjust the button width */}
-                    <Button
-                      width="100%"
-                      variant="contained"
-                      disableElevation
-                      sx={{
+                  {/* Adjust the button width */}
+                  <Button
+                    width="100%"
+                    variant="contained"
+                    disableElevation
+                    sx={{
+                      color: appTheme.palette.primary.white,
+                      fontSize: 18,
+                      fontWeight: 500,
+                      height: 40,
+                      mt: 3,
+                      backgroundColor: appTheme.palette.primary.green2,
+                      '&:hover': {
+                        fontWeight: 700,
+                        backgroundColor: appTheme.palette.primary.green3,
                         color: appTheme.palette.primary.white,
-                        fontSize: 18,
-                        fontWeight: 500,
-                        height: 40,
-                        mt: 3,
-                        backgroundColor: appTheme.palette.primary.green2,
-                        '&:hover': {
-                          fontWeight: 700
-                        },
-                      }}
-                    >
-                      Learn More
-                    </Button>
+                        transition: "all 0.3s ease",
+                      },
+                    }}
+                  >
+                    Learn More
+                  </Button>
                 </Grid>
-               
+
 
 
 
@@ -561,7 +573,10 @@ export default function Home(props) {
               sx={{
                 mt: 1.5, height: 60, backgroundColor: appTheme.palette.primary.green2, color: appTheme.palette.primary.white, fontSize: 20, mb: 2, fontWeight: 500,
                 '&:hover': {
-                  fontWeight: 700
+                  fontWeight: 700,
+                  backgroundColor: appTheme.palette.primary.green3,
+                  color: appTheme.palette.primary.white,
+                  transition: "all 0.3s ease",
                 },
               }}>
               Schedule an Appointment
@@ -586,7 +601,7 @@ export default function Home(props) {
                           <Grid sx={{ textAlign: "center" }}>
                             <div className="circular-image" >
                               <img
-                              // {urlFor(testimonial.image).url()}
+                                // {urlFor(testimonial.image).url()}
                                 src={urlFor(item.testimonial.image).url()}
                                 alt="Logo"
                               ></img>
@@ -598,7 +613,7 @@ export default function Home(props) {
                           </Grid>
                         </Grid>
                         <Grid item md={5} xs={12} >
-                          <Grid container alignItems="center" justifyContent="center" sx={{ }}>
+                          <Grid container alignItems="center" justifyContent="center" sx={{}}>
                             <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, textAlign: "center", color: appTheme.palette.primary.white, width: "90%" }}>{item.testimonial.blurb}</Typography>
                           </Grid>
                         </Grid>
@@ -740,7 +755,10 @@ export default function Home(props) {
                 color: appTheme.palette.primary.white, fontSize: 20, mb: 12, fontWeight: 500,
                 backgroundColor: appTheme.palette.primary.green2, height: 50,
                 '&:hover': {
-                  fontWeight: 700
+                  fontWeight: 700,
+                  backgroundColor: appTheme.palette.primary.green3,
+                  color: appTheme.palette.primary.white,
+                  transition: "all 0.3s ease",
                 },
               }}>
               Partner With Us

@@ -92,7 +92,7 @@ export default function Donate(props) {
                     .map((line, index) => (
                       <span key={index} style={{ display: 'block' }}>{line}</span>
                     ))}
-                    </Typography>
+                  </Typography>
                 </Grid>
               </Grid>
 
@@ -155,7 +155,7 @@ export default function Donate(props) {
                     .map((line, index) => (
                       <span key={index} style={{ display: 'block' }}>{line}</span>
                     ))}
-                    </Typography>
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
@@ -181,7 +181,10 @@ export default function Donate(props) {
                   color: appTheme.palette.primary.white, fontSize: 25, fontWeight: 500, mt: 2,
                   backgroundColor: appTheme.palette.primary.green2, borderRadius: 1, height: 50, width: 200,
                   '&:hover': {
-                    fontWeight: 700
+                    fontWeight: 700,
+                    backgroundColor: appTheme.palette.primary.green3,
+                    color: appTheme.palette.primary.white,
+                    transition: "all 0.3s ease",
                   },
                 }}>
                 Donate Now
