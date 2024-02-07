@@ -568,7 +568,9 @@ input::placeholder {
   border-radius: 10px !important;
   padding-left: 5px !important;
 }
-
+.css-9l3uo3{
+  padding-left: 8px !important;
+}
 .map{
   border-radius: 15px;
   box-shadow: rgb(182, 245, 153) 6px 6px 0px;
