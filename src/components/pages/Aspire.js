@@ -137,7 +137,7 @@ export default function Aspire(props) {
                             <Grid container justifyContent="center" alignItems="center">
                                 <CssBaseline />
                                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                                    <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{aspireData[0].mainHeading}</Typography>
+                                    <Typography variant="h1" sx={{ fontSize: 40, textAlign: "center", color: appTheme.palette.primary.green1 }}>{aspireData[0].mainHeading}</Typography>
                                 </Grid>
                             </Grid>
                             <Typography variant="h2" sx={{ fontSize: 22, width: "60%", margin: "0 auto", textAlign: "center", mb: 7 }}>{aspireData[0].mainBlurb}</Typography>

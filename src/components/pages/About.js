@@ -109,7 +109,7 @@ export default function About(props) {
 
           <Grid container justifyContent="center" alignItems="center" style={{ paddingTop: 30, paddingBottom: 100 }}>
             <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
-              <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', padding: 5 }}>
+              <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 5 }}>
                 <img
                   className="squareImage"
                   src={urlFor(aboutData[0].historyImage).url()}

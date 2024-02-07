@@ -132,7 +132,7 @@ export default function About(props) {
             <Grid container justifyContent="center" alignItems="center">
               <CssBaseline />
               <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                <Typography variant="h1" sx={{ fontSize: 40, mb: 5 }}>Impact we create</Typography>
+                <Typography variant="h1" sx={{ fontSize: 40, mb: 5 }}>Impact We Create</Typography>
               </Grid>
             </Grid>
           </Grid>

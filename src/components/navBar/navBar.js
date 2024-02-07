@@ -227,8 +227,8 @@ export default function NavBar() {
                   </Collapse>
 
                   <ListItemButton>
-                    <Link to="/aspire" style={{ textDecoration: 'none' }}>
-                      <ListItemText sx={{ fontFamily: "League Spartan" }} primary="Aspire" />
+                    <Link to="/workshops" style={{ textDecoration: 'none' }}>
+                      <ListItemText sx={{ fontFamily: "League Spartan" }} primary="Workshops" />
                     </Link>
                   </ListItemButton>
                   <ListItemButton>

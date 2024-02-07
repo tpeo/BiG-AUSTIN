@@ -152,7 +152,7 @@ export default function Partners(props) {
                         <Grid container
                             justifyContent="center"
                             alignItems="center">
-                            <Typography variant="h2" sx={{ fontSize: 25, margin: "0 auto", fontWeight: 500, letterSpacing: 1, mb: 6 }}>WHY SHOULD YOU PARTNER WITH US?</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 25, width: "90%", margin: "0 auto", fontWeight: 500, letterSpacing: 1, mb: 6, textAlign:"center" }}>WHY SHOULD YOU PARTNER WITH US?</Typography>
                         </Grid>
 
 

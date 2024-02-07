@@ -400,7 +400,18 @@ input::placeholder {
   right: 500px;
 }
 
-@media screen and (max-width: 592px) {
+@media screen and (max-width: 1312px) {
+  .arrow2--left {
+    left: 280px;
+  }
+  
+  .arrow2--right {
+    left: auto;
+    right: 280px;
+  }
+}
+
+@media screen and (max-width: 770px) {
   .arrow2--left {
     left: 40px;
   }
@@ -552,6 +563,12 @@ input::placeholder {
   padding-left: 5px !important;
 }
 
+.css-8l6tpu{
+  background-color: #eff0ee !important;
+  border-radius: 10px !important;
+  padding-left: 5px !important;
+}
+
 .map{
   border-radius: 15px;
   box-shadow: rgb(182, 245, 153) 6px 6px 0px;
@@ -618,4 +635,10 @@ div.ctct-form-embed form.ctct-form-custom button.ctct-form-button{
 
 div.ctct-form-embed form.ctct-form-custom input.ctct-form-element{
   height: 35px !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .programs-image-container {
+      width: 75% !important; /* Adjust the width for smaller screens */
+  }
 }

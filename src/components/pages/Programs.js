@@ -96,7 +96,9 @@ export default function Programs(props) {
                                 <Grid container spacing={2}>
                                     <Grid item xs={12} md={4}>
                                         {/* Adjust the image size and alignment */}
-                                        <div className="programs-image-container" style={{ width: "90%", display: "flex", justifyContent: "center", marginLeft: 30 }}>
+                                        <div className="programs-image-container" style={{
+                                            width: "90%", display: "flex", justifyContent: "center", marginLeft: 30, 
+                                        }}>
                                             <img width={"100%"} src={urlFor(item.programs.image).url()} alt="Coffee Talk" />
                                         </div>
                                     </Grid>
@@ -111,13 +113,17 @@ export default function Programs(props) {
                                             </Typography>
                                             <Typography
                                                 variant="h2"
-                                                sx={{ fontSize: 20, mb: 1, padding: 0 }}
+                                                sx={{
+                                                    fontSize: 20, mb: 1, padding: 0, '@media only screen and (max-width: 388px)': {
+                                                        padding: 2, // Adjust the width for smaller screens
+                                                    },
+                                                }}
                                             >
                                                 {item.programs.description}
                                             </Typography>
 
                                             <Grid container justifyContent="flex-start" alignItems="center" spacing={2} sx={{ mt: 5 }}>
-                                                <Grid item xs={6} md={4}>
+                                                <Grid item xs={7} md={4}>
                                                     <Link to={item.programs.buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
                                                         <Button
                                                             width="100%"
@@ -140,7 +146,11 @@ export default function Programs(props) {
                                                         </Button>
                                                     </Link>
                                                 </Grid>
-                                                <Grid item xs={6} md={8} sx={{ textAlign: 'right' }}>
+                                                <Grid item xs={5} md={8} sx={{
+                                                    textAlign: 'right', '@media only screen and (max-width: 400px)': {
+                                                        paddingRight: 1, // Adjust the width for smaller screens
+                                                    },
+                                                }}>
                                                     {/* Adjust the image width */}
                                                     <img width={45} src={require('../images/decor.png')} alt="Decor" />
                                                 </Grid>

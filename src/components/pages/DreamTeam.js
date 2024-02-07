@@ -202,7 +202,7 @@ export default function DreamTeam(props) {
             <Grid container spacing={2} sx={{ width: '60%', margin: '0 auto' }}>
               {teamData[0].directors.map((item, index) => (
                 <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-                  <Grid container>
+                  <Grid container spacing={2}>
                     {/* Left side  */}
                     <Grid item xs={5} style={{}}>
                       <div className="circular-image3">
@@ -210,7 +210,7 @@ export default function DreamTeam(props) {
                       </div>
                     </Grid>
                     {/* Right side  */}
-                    <Grid item xs={7} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
+                    <Grid item xs={7} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                       <Typography variant="h1" sx={{ fontSize: 19, mt: 2, color: "#2C3343", padding: 1, fontWeight: 400}}>{item.directors.name}</Typography>
                       <Typography variant="h2" sx={{ fontSize: 17, color: "#2C3343", fontWeight: 300, width: "60%", textAlign: "center" }}>{item.directors.description}</Typography>
                     </Grid>

@@ -285,7 +285,7 @@ export default function Workshops(props) {
               alignItems: "center",
               justifyContent: "center",
               width: "78%",
-              margin: "auto",
+              margin: "0 auto",
               mb: 12
             }}>
               <Grid container spacing={5}>

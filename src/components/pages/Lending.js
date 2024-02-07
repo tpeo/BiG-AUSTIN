@@ -140,7 +140,7 @@ export default function Lending(props) {
                                                 color: appTheme.palette.primary.white,
                                                 transition: "all 0.3s ease",
                                             },
-                                            '@media only screen and (max-width: 600px)': {
+                                            '@media only screen and (max-width: 388px)': {
                                                 marginBottom: 2, // Adjust the width for smaller screens
                                             },
                                         }}>
