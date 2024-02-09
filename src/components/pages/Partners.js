@@ -368,7 +368,7 @@ export default function Partners(props) {
                                 <div ref={sliderRef1} className="keen-slider">
                                     {partnersData[0].partners.map((items) => (
                                         <div className="keen-slider__slide number-slide1">
-                                            {/* {console.log(items)} */}
+                                            {console.log(items)}
                                             <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
                                                 <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
                                                     {/* Image 1 */}

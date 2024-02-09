@@ -157,7 +157,11 @@ export default function Home(props) {
           blurb
         }
       },
-      partners
+      partners[]{
+        partners-> {
+            partnersImages
+        }
+      },
     }`
     )
       .then(
@@ -694,31 +698,31 @@ export default function Home(props) {
 
           <div className="testimonials" style={{ textAlign: "center", color: "white", width: "100%" }}>
             <div className="navigation-wrapper">
-              <div ref={sliderRef1} className="keen-slider">
-                {homeData[0].partners.map((items) => (
-                  <div className="keen-slider__slide number-slide1">
-                    <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
-                      <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "70%" }}>
-                        {/* Image 1 */}
-                        {homeData[0].partners.map((items) => (
-                          <Grid item md={3} sm={6} xs={12} sx={{ justifyContent: 'center', alignItems: 'center' }}>
-                            <Grid sx={{ textAlign: "center" }}>
-                              <div className="circular-image2">
-                                <img width={40}
-                                  src={urlFor(items).url()}
-                                  alt="Image 1"
-                                />
-                              </div>
-                            </Grid>
-                          </Grid>
-                        ))}
+            <div ref={sliderRef1} className="keen-slider">
+                                    {homeData[0].partners.map((items) => (
+                                        <div className="keen-slider__slide number-slide1">
+                                            {console.log(items)}
+                                            <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
+                                                <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
+                                                    {/* Image 1 */}
+                                                    {/* {console.log(items)} */}
+                                                    {(items.partners.partnersImages).map((item) => (
+                                                        <Grid sx={{ textAlign: "center" }}>
+                                                            <div className="partnersImage">
+                                                                <img width={200}
+                                                                    src={urlFor(item).url()}
+                                                                    alt="Image 1"
+                                                                />
+                                                            </div>
+                                                        </Grid>
+                                                    ))}
 
-                      </Grid>
-                    </Grid>
+                                                </Grid>
+                                            </Grid>
 
-                  </div>
-                ))}
-              </div>
+                                        </div>
+                                    ))}
+                                </div>
               {loaded1 && instanceRef1.current && (
                 <>
                   <Arrow1
