@@ -143,12 +143,15 @@ export default function Home(props) {
       column1image,
       column1title,
       column1blurb,
+      column1link,
       column2image,
       column2title,
       column2blurb,
+      column2link,
       column3image,
       column3title,
       column3blurb,
+      column3link,
       testimonials[]{
         testimonial-> {
           name,
@@ -437,27 +440,29 @@ export default function Home(props) {
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
-                  <Button
-                    width="100%"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      color: appTheme.palette.primary.white,
-                      fontSize: 18,
-                      fontWeight: 500,
-                      height: 40,
-                      mt: 3,
-                      backgroundColor: appTheme.palette.primary.green2,
-                      '&:hover': {
-                        fontWeight: 700,
-                        backgroundColor: appTheme.palette.primary.green3,
+                  <Link to={homeData[0].column1link} target="_blank" style={{ textDecoration: 'none' }}>
+                    <Button
+                      width="100%"
+                      variant="contained"
+                      disableElevation
+                      sx={{
                         color: appTheme.palette.primary.white,
-                        transition: "all 0.3s ease",
-                      },
-                    }}
-                  >
-                    Learn More
-                  </Button>
+                        fontSize: 18,
+                        fontWeight: 500,
+                        height: 40,
+                        mt: 3,
+                        backgroundColor: appTheme.palette.primary.green2,
+                        '&:hover': {
+                          fontWeight: 700,
+                          backgroundColor: appTheme.palette.primary.green3,
+                          color: appTheme.palette.primary.white,
+                          transition: "all 0.3s ease",
+                        },
+                      }}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </Grid>
                 <Grid item xs
                   sx={{
@@ -488,27 +493,29 @@ export default function Home(props) {
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
-                  <Button
-                    width="100%"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      color: appTheme.palette.primary.white,
-                      fontSize: 18,
-                      fontWeight: 500,
-                      height: 40,
-                      mt: 3,
-                      backgroundColor: appTheme.palette.primary.green2,
-                      '&:hover': {
-                        fontWeight: 700,
-                        backgroundColor: appTheme.palette.primary.green3,
+                  <Link to={homeData[0].column2link} target="_blank" style={{ textDecoration: 'none' }}>
+                    <Button
+                      width="100%"
+                      variant="contained"
+                      disableElevation
+                      sx={{
                         color: appTheme.palette.primary.white,
-                        transition: "all 0.3s ease",
-                      },
-                    }}
-                  >
-                    Learn More
-                  </Button>
+                        fontSize: 18,
+                        fontWeight: 500,
+                        height: 40,
+                        mt: 3,
+                        backgroundColor: appTheme.palette.primary.green2,
+                        '&:hover': {
+                          fontWeight: 700,
+                          backgroundColor: appTheme.palette.primary.green3,
+                          color: appTheme.palette.primary.white,
+                          transition: "all 0.3s ease",
+                        },
+                      }}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </Grid>
                 <Grid item xs
                   sx={{
@@ -539,27 +546,29 @@ export default function Home(props) {
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
-                  <Button
-                    width="100%"
-                    variant="contained"
-                    disableElevation
-                    sx={{
-                      color: appTheme.palette.primary.white,
-                      fontSize: 18,
-                      fontWeight: 500,
-                      height: 40,
-                      mt: 3,
-                      backgroundColor: appTheme.palette.primary.green2,
-                      '&:hover': {
-                        fontWeight: 700,
-                        backgroundColor: appTheme.palette.primary.green3,
+                  <Link to={homeData[0].column3link} target="_blank" style={{ textDecoration: 'none' }}>
+                    <Button
+                      width="100%"
+                      variant="contained"
+                      disableElevation
+                      sx={{
                         color: appTheme.palette.primary.white,
-                        transition: "all 0.3s ease",
-                      },
-                    }}
-                  >
-                    Learn More
-                  </Button>
+                        fontSize: 18,
+                        fontWeight: 500,
+                        height: 40,
+                        mt: 3,
+                        backgroundColor: appTheme.palette.primary.green2,
+                        '&:hover': {
+                          fontWeight: 700,
+                          backgroundColor: appTheme.palette.primary.green3,
+                          color: appTheme.palette.primary.white,
+                          transition: "all 0.3s ease",
+                        },
+                      }}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </Grid>
 
 
@@ -698,31 +707,31 @@ export default function Home(props) {
 
           <div className="testimonials" style={{ textAlign: "center", color: "white", width: "100%" }}>
             <div className="navigation-wrapper">
-            <div ref={sliderRef1} className="keen-slider">
-                                    {homeData[0].partners.map((items) => (
-                                        <div className="keen-slider__slide number-slide1">
-                                            {console.log(items)}
-                                            <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
-                                                <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
-                                                    {/* Image 1 */}
-                                                    {/* {console.log(items)} */}
-                                                    {(items.partners.partnersImages).map((item) => (
-                                                        <Grid sx={{ textAlign: "center" }}>
-                                                            <div className="partnersImage">
-                                                                <img width={200}
-                                                                    src={urlFor(item).url()}
-                                                                    alt="Image 1"
-                                                                />
-                                                            </div>
-                                                        </Grid>
-                                                    ))}
+              <div ref={sliderRef1} className="keen-slider">
+                {homeData[0].partners.map((items) => (
+                  <div className="keen-slider__slide number-slide1">
+                    {console.log(items)}
+                    <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
+                      <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
+                        {/* Image 1 */}
+                        {/* {console.log(items)} */}
+                        {(items.partners.partnersImages).map((item) => (
+                          <Grid sx={{ textAlign: "center" }}>
+                            <div className="partnersImage">
+                              <img width={200}
+                                src={urlFor(item).url()}
+                                alt="Image 1"
+                              />
+                            </div>
+                          </Grid>
+                        ))}
 
-                                                </Grid>
-                                            </Grid>
+                      </Grid>
+                    </Grid>
 
-                                        </div>
-                                    ))}
-                                </div>
+                  </div>
+                ))}
+              </div>
               {loaded1 && instanceRef1.current && (
                 <>
                   <Arrow1
