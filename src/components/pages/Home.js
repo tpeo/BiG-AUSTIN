@@ -9,7 +9,7 @@ import {
 import BottomBar from "../bottomBar/bottomBar.js";
 // import NavBar from "../navBar/navBar.js";
 import NavBar from "../navBar/navBar.js";
-
+import { Link } from 'react-router-dom';
 import "./Pages.css"
 import { ThemeProvider } from "@mui/material/styles";
 // import Carousel from "react-material-ui-carousel";
