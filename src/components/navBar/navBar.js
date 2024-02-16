@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SiteNav, { ContentGroup } from "react-site-nav";
 // import {
 //   Switch,
@@ -38,10 +38,17 @@ import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
-
 import Route from "../../components/Route";
-
+import createClient from '../../client.js';
 import "./navBar.css";
+import imageUrlBuilder from '@sanity/image-url'
+
+const builder = imageUrlBuilder(createClient)
+
+function urlFor(source) {
+  return builder.image(source)
+}
+
 
 export default function NavBar() {
   const [showModal, setShowModal] = React.useState(false);
@@ -64,6 +71,20 @@ export default function NavBar() {
     setOpen3(!open3);
   };
 
+  const [navData, setNav] = useState(null);
+  useEffect(() => {
+    createClient.fetch(
+      `*[_type == "header"]{
+          logo
+    }`
+    )
+      .then(
+        (data) => setNav(data)
+      )
+      .catch(console.error);
+  }, []//dependency array 
+  )
+
 
 
 
@@ -77,6 +98,7 @@ export default function NavBar() {
 
   return (
     <ThemeProvider theme={appTheme}>
+      {navData && (
 
       <AppBar
         position="fixed"
@@ -97,7 +119,7 @@ export default function NavBar() {
               <Link to="/">
                 <img
                   alt={"logo"}
-                  src={require('../images/bigaustinlogo.png')}
+                  src={urlFor(navData[0].logo).url()}
                 />
               </Link>
             </div>
@@ -364,6 +386,8 @@ export default function NavBar() {
           </header>
         </div>
       </AppBar>
+      )}
     </ThemeProvider>
+    
   );
 }
