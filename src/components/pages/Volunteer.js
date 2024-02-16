@@ -36,12 +36,10 @@ export default function Volunteer(props) {
                 mainHeading,
                 mainBlurb,
                 headingImage,
-                volunteerReasons[]{
-                    volunteerReasons-> {
+                volunteerReasons1[]->{
                       title,
                       description,
                       icon
-                    }
                   },
                   volunteerBlurb1,
                   volunteerBlurb2,
@@ -109,7 +107,7 @@ export default function Volunteer(props) {
                             mb: 12
                         }}>
                             <Grid container spacing={3}>
-                                {volunteerData[0].volunteerReasons.map((items) => (
+                                {volunteerData[0].volunteerReasons1.map((items) => (
                                     <Grid item xs sx={{
                                         display: "flex",
                                         flexDirection: "column",
@@ -145,15 +143,15 @@ export default function Volunteer(props) {
                                                     mt: 1,
                                                     mb: 4
                                                 }}>
-                                                    <span style={{ paddingRight: 10, width: "70%", fontSize: 27, color: appTheme.palette.primary.white }}>{items.volunteerReasons.title}</span>
+                                                    <span style={{ paddingRight: 10, width: "70%", fontSize: 27, color: appTheme.palette.primary.white }}>{items.title}</span>
                                                     <div className="image-container1" style={{ "margin-bottom": "10px" }}>
-                                                        <img width={85} src={urlFor(items.volunteerReasons.icon).url()} />
+                                                        <img width={85} src={urlFor(items.icon).url()} />
                                                     </div>
                                                     <Typography
                                                         variant="h2"
                                                         sx={{ textAlign: "left", fontSize: 18, mt: 1, mb: 1, color: appTheme.palette.primary.white }}
                                                     >
-                                                        {items.volunteerReasons.description}
+                                                        {items.description}
                                                     </Typography>
                                                 </Typography>
                                             </Grid>

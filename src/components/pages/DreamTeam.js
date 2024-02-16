@@ -40,7 +40,7 @@ export default function DreamTeam(props) {
   // const handleOpen = () => setOpen(true);
 
   const handleOpen = (item) => {
-    setSelectedTeamMember(item.people);
+    setSelectedTeamMember(item);
     setOpen(true);
     // other logic for opening the modal
   };
@@ -58,22 +58,18 @@ export default function DreamTeam(props) {
         mainQuote,
         mainBlurb,
         directorsBlurb,
-        people[]{
-          people-> {
+        people1[]->{
             name,
             description,
             image,
             number,
             email,
             blurb
-          }
         },
-        directors[]{
-          directors-> {
+        directors1[]->{
             name,
             description,
             image
-          }
         },
       }`
     )
@@ -96,6 +92,8 @@ export default function DreamTeam(props) {
             <NavBar />
           </Grid>
 
+          {console.log(teamData)}
+
           <Grid sx={{ height: "auto", mt: 5, mb: 7 }}>
             <Grid container justifyContent="center" alignItems="center">
               <CssBaseline />
@@ -109,14 +107,15 @@ export default function DreamTeam(props) {
 
 
           <Grid container spacing={3} sx={{ width: "70%", margin: "0 auto" }}>
-            {teamData[0].people.map((item, index) => (
+            {teamData[0].people1.map((item, index) => (
               <Grid item key={index} xs={12} sm={6} md={4} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                 <div className="imagecard" onClick={() => handleOpen(item)} style={{ textAlign: 'center' }}>
                   <div className="circular-image2">
-                    <img width={200} src={urlFor(item.people.image).url()} alt={item.people.name} style={{ display: 'block' }} />
+                    {console.log(item.image)}
+                    <img width={200} src={urlFor(item.image).url()} alt={item.name} style={{ display: 'block' }} />
                   </div>
-                  <Typography variant="h1" sx={{ fontSize: 19, padding: 1, fontWeight: 400 }}>{item.people.name}</Typography>
-                  <Typography variant="h2" sx={{ fontSize: 17, fontWeight: 400 }}>{item.people.description}</Typography>
+                  <Typography variant="h1" sx={{ fontSize: 19, padding: 1, fontWeight: 400 }}>{item.name}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: 17, fontWeight: 400 }}>{item.description}</Typography>
                 </div>
               </Grid>
             ))}
@@ -143,13 +142,13 @@ export default function DreamTeam(props) {
                       width: '80%', // Adjust the width for smaller screens
                     },
                   }}
-                  
+
                 >
                   <Grid container>
                     {/* Left side  */}
                     <Grid item xs={12} sm={5} style={{ backgroundColor: appTheme.palette.primary.blue1, borderRadius: '10px 0 0 10px' }}>
                       <div className="programs-image-container" style={{ width: "70%", margin: "0 auto", marginTop: "60px", marginBottom: "45px", display: "flex", justifyContent: "center" }}>
-                        <img src={urlFor(selectedTeamMember.image).url()} />
+                        <img src={urlFor(selectedTeamMember.image).url()} style={{ width: "220px", height: "220px", objectFit: "cover" }} />
                       </div>
 
 
@@ -200,19 +199,19 @@ export default function DreamTeam(props) {
             </Grid>
 
             <Grid container spacing={2} sx={{ width: '60%', margin: '0 auto' }}>
-              {teamData[0].directors.map((item, index) => (
+              {teamData[0].directors1.map((item, index) => (
                 <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                   <Grid container spacing={2}>
                     {/* Left side  */}
                     <Grid item xs={5} style={{}}>
                       <div className="circular-image3">
-                        <img width={200} src={urlFor(item.directors.image).url()} alt={item.directors.name} style={{ display: 'block' }} />
+                        <img width={200} src={urlFor(item.image).url()} alt={item.name} style={{ display: 'block' }} />
                       </div>
                     </Grid>
                     {/* Right side  */}
-                    <Grid item xs={7} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                      <Typography variant="h1" sx={{ fontSize: 19, mt: 2, color: "#2C3343", padding: 1, fontWeight: 400}}>{item.directors.name}</Typography>
-                      <Typography variant="h2" sx={{ fontSize: 17, color: "#2C3343", fontWeight: 300, width: "60%", textAlign: "center" }}>{item.directors.description}</Typography>
+                    <Grid item xs={7} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                      <Typography variant="h1" sx={{ fontSize: 19, mt: 2, color: "#2C3343", padding: 1, fontWeight: 400 }}>{item.name}</Typography>
+                      <Typography variant="h2" sx={{ fontSize: 17, color: "#2C3343", fontWeight: 300, width: "60%", textAlign: "center" }}>{item.description}</Typography>
                     </Grid>
                   </Grid>
                 </Grid>

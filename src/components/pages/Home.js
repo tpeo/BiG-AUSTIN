@@ -152,18 +152,14 @@ export default function Home(props) {
       column3title,
       column3blurb,
       column3link,
-      testimonials[]{
-        testimonial-> {
-          name,
-          description,
-          image,
-          blurb
-        }
+      testimonials1[]->{
+        name,
+        description,
+        image,
+        blurb
       },
-      partners[]{
-        partners-> {
-            partnersImages
-        }
+      partners1[]->{
+        partnersImages
       },
     }`
     )
@@ -179,7 +175,7 @@ export default function Home(props) {
   return (
     <ThemeProvider theme={appTheme}>
       {homeData && (
-
+        
 
 
         <div style={{ height: "100vh" }}>
@@ -598,6 +594,7 @@ export default function Home(props) {
 
 
 
+          {console.log(homeData[0].testimonials1)}
 
 
 
@@ -605,9 +602,9 @@ export default function Home(props) {
             <h2 style={{ color: "white", paddingTop: 50, paddingBottom: 20 }}>Testimonials</h2>
             <div className="navigation-wrapper">
               <div ref={sliderRef} className="keen-slider">
-                {homeData[0].testimonials.map((item) => (
+                {homeData[0].testimonials1.map((item) => (
                   <div className="keen-slider__slide number-slide1">
-                    {/* {console.log("home", item)} */}
+                    {console.log("home", item.name)}
                     <Grid container justifyContent="center" alignItems="center" sx={{ mb: 10, backgroundColor: appTheme.palette.primary.blue1 }}>
                       <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "95%" }}>
                         <Grid item md={4} xs={12} sx={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -615,19 +612,19 @@ export default function Home(props) {
                             <div className="circular-image" >
                               <img
                                 // {urlFor(testimonial.image).url()}
-                                src={urlFor(item.testimonial.image).url()}
+                                src={urlFor(item.image).url()}
                                 alt="Logo"
                               ></img>
                             </div>
                           </Grid>
                           <Grid>
-                            <Typography variant="h1" sx={{ textAlign: "center", fontSize: 21, fontWeight: 500, color: appTheme.palette.primary.white, mb: -1 }}>{item.testimonial.name}</Typography>
-                            <Typography variant="h2" sx={{ textAlign: "center", fontSize: 18, fontWeight: 400, color: appTheme.palette.primary.white }}>{item.testimonial.description}</Typography>
+                            <Typography variant="h1" sx={{ textAlign: "center", fontSize: 21, fontWeight: 500, color: appTheme.palette.primary.white, mb: -1 }}>{item.name}</Typography>
+                            <Typography variant="h2" sx={{ textAlign: "center", fontSize: 18, fontWeight: 400, color: appTheme.palette.primary.white }}>{item.description}</Typography>
                           </Grid>
                         </Grid>
                         <Grid item md={5} xs={12} >
                           <Grid container alignItems="center" justifyContent="center" sx={{}}>
-                            <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, textAlign: "center", color: appTheme.palette.primary.white, width: "90%" }}>{item.testimonial.blurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, textAlign: "center", color: appTheme.palette.primary.white, width: "90%" }}>{item.blurb}</Typography>
                           </Grid>
                         </Grid>
                       </Grid>
@@ -708,16 +705,17 @@ export default function Home(props) {
           <div className="testimonials" style={{ textAlign: "center", color: "white", width: "100%" }}>
             <div className="navigation-wrapper">
               <div ref={sliderRef1} className="keen-slider">
-                {homeData[0].partners.map((items) => (
+                {homeData[0].partners1.map((items) => (
                   <div className="keen-slider__slide number-slide1">
                     {console.log(items)}
                     <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
                       <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
                         {/* Image 1 */}
                         {/* {console.log(items)} */}
-                        {(items.partners.partnersImages).map((item) => (
+                        {(items.partnersImages).map((item) => (
                           <Grid sx={{ textAlign: "center" }}>
                             <div className="partnersImage">
+                            {console.log(item)}
                               <img width={200}
                                 src={urlFor(item).url()}
                                 alt="Image 1"

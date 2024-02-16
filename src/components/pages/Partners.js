@@ -99,10 +99,8 @@ export default function Partners(props) {
                 column4title,
                 column4blurb,
                 partnersButton,
-                partners[]{
-                    partners-> {
-                        partnersImages
-                    }
+                partners1[]->{
+                    partnersImages
                 },
                 }`
         )
@@ -366,14 +364,14 @@ export default function Partners(props) {
                         <div className="testimonials" style={{ textAlign: "center", color: "white", width: "100%" }}>
                             <div className="navigation-wrapper">
                                 <div ref={sliderRef1} className="keen-slider">
-                                    {partnersData[0].partners.map((items) => (
+                                    {partnersData[0].partners1.map((items) => (
                                         <div className="keen-slider__slide number-slide1">
                                             {console.log(items)}
                                             <Grid container justifyContent="center" alignItems="center" sx={{ mb: 6 }}>
                                                 <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
                                                     {/* Image 1 */}
                                                     {/* {console.log(items)} */}
-                                                    {(items.partners.partnersImages).map((item) => (
+                                                    {(items.partnersImages).map((item) => (
                                                         <Grid sx={{ textAlign: "center" }}>
                                                             <div className="partnersImage">
                                                                 <img width={200}

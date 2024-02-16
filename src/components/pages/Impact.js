@@ -99,13 +99,11 @@ export default function About(props) {
       stat4title,
       stat4subheading,
       stat4number,
-      clientstories[]{
-        clientstories-> {
+      clientstories1[]->{
           name,
           blurb,
           image,
           videoURL
-        }
       },
     }`
     )
@@ -352,16 +350,16 @@ export default function About(props) {
             <div className="navigation-wrapper">
 
               <div ref={sliderRef} className="keen-slider">
-                {impactData[0].clientstories.map((item) => (
+                {impactData[0].clientstories1.map((item) => (
                   <div className="keen-slider__slide number-slide1">
                     {/* {console.log("impact", item.clientstories)} */}
                     <Grid container justifyContent="center" alignItems="center" sx={{ width: "72%", paddingTop: "40px", margin: "0 auto", mb: 10, backgroundColor: appTheme.palette.primary.platinum }}>
                       <Grid container direction="row" justifyContent="center" alignItems="flex-start" sx={{ width: "100%" }}>
                         <Grid item md={5} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
                           <Grid sx={{ textAlign: 'center' }}>
-                            <Typography variant="h1" sx={{ textAlign: "left", padding: "0px", paddingBottom: "20px", fontSize: 30, fontWeight: 500, color: appTheme.palette.primary.blue1 }}>{item.clientstories.name}</Typography>
+                            <Typography variant="h1" sx={{ textAlign: "left", padding: "0px", paddingBottom: "20px", fontSize: 30, fontWeight: 500, color: appTheme.palette.primary.blue1 }}>{item.name}</Typography>
                             <Typography variant="h2" sx={{ textAlign: "left", fontSize: 20, fontWeight: 200, color: appTheme.palette.primary.space, whiteSpace: 'pre-line', wordWrap: 'break-word' }}>
-                              <ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.clientstories.blurb} />
+                              <ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.blurb} />
                             </Typography>
                           </Grid>
                         </Grid>
@@ -369,7 +367,7 @@ export default function About(props) {
                           <Grid container justifyContent="center" alignItems="center" direction="row" sx={{ textAlign: "center" }}>
                             <div className="square-image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                               <img
-                                src={urlFor(item.clientstories.image).url()}
+                                src={urlFor(item.image).url()}
                                 alt="Logo"
                                 style={{ maxWidth: '100%', height: 'auto' }}
                               />
@@ -379,7 +377,7 @@ export default function About(props) {
 
                         {/* YouTube Video */}
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingTop: "50px" }}>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/N_prLS-aTqU?si=cjiCqqsFF9fPy8S_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe width="560" height="315" src={item.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </Grid>
                       </Grid>
                     </Grid>

@@ -99,12 +99,10 @@ export default function Aspire(props) {
                 card3title,
                 card3image,
                 card3text,
-                news[]{
-                    news-> {
+                news1[]->{
                       title,
                       date,
                       description,
-                    }
                   },
             }`
         )
@@ -342,18 +340,18 @@ export default function Aspire(props) {
                         <h2 style={{ color: appTheme.palette.primary.blue1, fontWeight: 800, paddingTop: 50, paddingBottom: 20 }}>Recent News</h2>
                         <div className="navigation-wrapper">
                             <div ref={sliderRef} className="keen-slider">
-                                {aspireData[0].news.map((item) => (
+                                {aspireData[0].news1.map((item) => (
                                     <div className="keen-slider__slide number-slide1">
                                         {/* {console.log("news", item)} */}
                                         <Grid container justifyContent="center" alignItems="center" sx={{ mb: 5, backgroundColor: appTheme.palette.primary.green4 }}>
 
                                             <Grid container direction="row" sx={{ width: "50%" }}>
-                                                <h2 style={{ color: appTheme.palette.primary.blue1, textAlign: "left", fontSize: 23, fontWeight: 800, paddingTop: 50, paddingBottom: 2 }}>{item.news.title}</h2>
+                                                <h2 style={{ color: appTheme.palette.primary.blue1, textAlign: "left", fontSize: 23, fontWeight: 800, paddingTop: 50, paddingBottom: 2 }}>{item.title}</h2>
 
-                                                <Typography variant="h2" sx={{ textAlign: "center", fontWeight: 500, color: appTheme.palette.primary.blue1, fontSize: 17, mb: 3, mt: 1, textTransform: "uppercase" }}>{item.news.date}</Typography>
+                                                <Typography variant="h2" sx={{ textAlign: "center", fontWeight: 500, color: appTheme.palette.primary.blue1, fontSize: 17, mb: 3, mt: 1, textTransform: "uppercase" }}>{item.date}</Typography>
 
                                                 <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
-                                                    <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1 }}>{item.news.description}</Typography>
+                                                    <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1 }}>{item.description}</Typography>
                                                 </Grid>
                                             </Grid>
                                         </Grid>

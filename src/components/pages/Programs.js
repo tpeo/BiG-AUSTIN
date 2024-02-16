@@ -30,13 +30,11 @@ export default function Programs(props) {
         createClient.fetch(
             `*[_type == "programsPage"]{
                 headingImage,
-                programs[]{
-                    programs-> {
+                programs1[]->{
                       title,
                       description,
                       image,
                       buttonLink
-                    }
                 },
             }`
         )
@@ -68,7 +66,7 @@ export default function Programs(props) {
                         </Grid>
                     </Grid>
 
-                    {programData[0].programs.map((item, index) => (
+                    {programData[0].programs1.map((item, index) => (
 
                         <Grid sx={{
                             width: "100%",
@@ -99,7 +97,7 @@ export default function Programs(props) {
                                         <div className="programs-image-container" style={{
                                             width: "90%", display: "flex", justifyContent: "center", marginLeft: 30, 
                                         }}>
-                                            <img width={"100%"} src={urlFor(item.programs.image).url()} alt="Coffee Talk" />
+                                            <img width={"100%"} src={urlFor(item.image).url()} alt="Coffee Talk" />
                                         </div>
                                     </Grid>
                                     <Grid item xs={12} md={8}>
@@ -109,7 +107,7 @@ export default function Programs(props) {
                                                 variant="h1"
                                                 sx={{ fontWeight: 550, fontSize: 28, mb: 2, padding: 0 }}
                                             >
-                                                {item.programs.title}
+                                                {item.title}
                                             </Typography>
                                             <Typography
                                                 variant="h2"
@@ -119,12 +117,12 @@ export default function Programs(props) {
                                                     },
                                                 }}
                                             >
-                                                {item.programs.description}
+                                                {item.description}
                                             </Typography>
 
                                             <Grid container justifyContent="flex-start" alignItems="center" spacing={2} sx={{ mt: 5 }}>
                                                 <Grid item xs={7} md={4}>
-                                                    <Link to={item.programs.buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
+                                                    <Link to={item.buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
                                                         <Button
                                                             width="100%"
                                                             variant="contained"

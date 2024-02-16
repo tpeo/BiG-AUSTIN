@@ -61,11 +61,9 @@ export default function StartSmart(props) {
         instructorTitle,
         instructorDescp,
         programDetails,
-        faq[]{
-          faq-> {
+        faq1[]->{
             question,
             answer
-          }
         },
     }`
     )
@@ -619,13 +617,14 @@ export default function StartSmart(props) {
               </Grid>
 
 
-              {smartData[0].faq.map((item) => (
+              {smartData[0].faq1.map((item) => (
                 <Grid>
-                  <Typography variant="h2" sx={{ textAlign: "left", fontSize: 24, fontFamily: "DM Serif Display", fontWeight: 500, mb: 2, color: appTheme.palette.primary.space }}>{item.faq.question}</Typography>
+                  {console.log(item)}
+                  <Typography variant="h2" sx={{ textAlign: "left", fontSize: 24, fontFamily: "DM Serif Display", fontWeight: 500, mb: 2, color: appTheme.palette.primary.space }}>{item.question}</Typography>
                   <Typography variant="h2" sx={{
                     fontSize: 24, fontWeight: 200, color: appTheme.palette.primary.space, mb: 3, whiteSpace: 'pre-line',
                     wordWrap: 'break-word',
-                  }}>{item.faq.answer.split('<br>')
+                  }}>{item.answer.split('<br>')
                     .map((line, index) => (
                       <span key={index} style={{ display: 'block' }}>{line}</span>
                     ))}

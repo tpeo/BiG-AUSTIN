@@ -68,15 +68,13 @@ export default function Workshops(props) {
         backgroundImage,
         mainHeading,
         mainBlurb,
-        workshops[]{
-          workshops-> {
+        workshops1[]->{
             image,
             description,
             title,
             name,
             dateTime,
             button
-          }
         },
     }`
     )
@@ -90,12 +88,12 @@ export default function Workshops(props) {
   useEffect(() => {
 
     if (workData) {
-      const newEvents = workData[0].workshops.map(item => ({
-        title: item.workshops.title,
-        description: item.workshops.description,
-        button: item.workshops.button,
-        image: item.workshops.image,
-        date: new Date(item.workshops.dateTime),
+      const newEvents = workData[0].workshops1.map(item => ({
+        title: item.title,
+        description: item.description,
+        button: item.button,
+        image: item.image,
+        date: new Date(item.dateTime),
       }));
 
       setEvents(newEvents);
@@ -289,7 +287,7 @@ export default function Workshops(props) {
               mb: 12
             }}>
               <Grid container spacing={5}>
-                {workData[0].workshops.map((items) => (
+                {workData[0].workshops1.map((items) => (
 
                   <Grid item xs>
                     <Card
@@ -305,7 +303,7 @@ export default function Workshops(props) {
                       }}
                     >
                       <div>
-                        <img height={20} style={{ "border-bottom": "7px solid #B6F599" }} src={urlFor(items.workshops.image).url()} />
+                        <img height={20} style={{ "border-bottom": "7px solid #B6F599" }} src={urlFor(items.image).url()} />
                       </div>
 
                       <Grid sx={{ paddingLeft: 3 }}>
@@ -322,9 +320,9 @@ export default function Workshops(props) {
                           mt: 2
                         }}>
                           <PersonIcon sx={{ marginRight: 1 }}></PersonIcon>
-                          <span style={{ paddingRight: 17 }}>{items.workshops.name}</span>
+                          <span style={{ paddingRight: 17 }}>{items.name}</span>
                           <CalendarMonthIcon sx={{ marginLeft: 3, marginRight: 1 }}></CalendarMonthIcon>
-                          <span style={{ paddingRight: 17 }}> {moment(items.workshops.dateTime).format('YYYY-MM-DD')}</span>
+                          <span style={{ paddingRight: 17 }}> {moment(items.dateTime).format('YYYY-MM-DD')}</span>
                         </Typography>
                       </Grid>
 
@@ -334,7 +332,7 @@ export default function Workshops(props) {
                             variant="h1"
                             sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 2 }}
                           >
-                            {items.workshops.title}
+                            {items.title}
                           </Typography>
                         </div>
 
@@ -343,13 +341,13 @@ export default function Workshops(props) {
                             variant="h2"
                             sx={{ fontSize: 17, mb: 1, width: "90%" }}
                           >
-                            {items.workshops.description}
+                            {items.description}
                           </Typography>
                         </div>
                       </div>
 
                       <Grid>
-                        <Link to={items.workshops.button} target="_blank" style={{ textDecoration: 'none' }}>
+                        <Link to={items.button} target="_blank" style={{ textDecoration: 'none' }}>
                           <Button
                             width="150"
                             height="20"

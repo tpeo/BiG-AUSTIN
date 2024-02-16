@@ -37,12 +37,10 @@ export default function Consulting(props) {
         boldText2,
         paragraph2,
         buttonLink,
-        skills[]{
-          skills-> {
+        skills1[]->{
             title,
             description,
             image
-          }
         },
     }`
     )
@@ -138,46 +136,59 @@ export default function Consulting(props) {
             mb: 12
           }}>
             <Grid container spacing={5}>
-              {educData[0].skills.map((item) => (
+              {educData[0].skills1.map((item) => (
                 <Grid item xs>
                   {/* {console.log(item.skills)} */}
                   <Card
                     sx={{
                       backgroundColor: appTheme.palette.primary.white,
-                      width: 250,
+                      width: 290,
                       borderRadius: 1,
                       margin: "auto",
                       display: "flex",
                       boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
                       flexDirection: "column",
+                      position: "relative" // Add this to allow positioning the image container
                     }}
                   >
-                    <div style={{ "margin-bottom": "10px" }}>
-                      <img height={20} src={urlFor(item.skills.image).url()} />
+                    <div
+                      style={{
+                        height: 200, // Set height to 200px
+                        width: "100%", // Take up the full width
+                        overflow: "hidden", // Hide any overflow
+                        borderTopLeftRadius: "inherit", // Inherit border radius from parent
+                        borderTopRightRadius: "inherit", // Inherit border radius from parent
+                      }}
+                    >
+                      <img
+                        style={{
+                          height: "100%", // Take up full height of container
+                          objectFit: "cover", // Ensure the image covers the container
+                          width: "100%", // Take up full width of container
+                        }}
+                        src={urlFor(item.image).url()}
+                      />
                     </div>
 
-                    <div style={{ "padding": "10px" }}>
+                    <div style={{ padding: "20px" }}>
                       <div>
                         <Typography
                           variant="h1"
                           sx={{ fontWeight: 550, padding: 0, fontSize: 22, mb: 2 }}
                         >
-                          {item.skills.title}
+                          {item.title}
                         </Typography>
                       </div>
 
                       <div>
-                        <Typography
-                          variant="h2"
-                          sx={{ fontSize: 17, mb: 1, width: 220 }}
-                        >
-                          {item.skills.description}
+                        <Typography variant="h2" sx={{ fontSize: 17, mb: 1, width: 220 }}>
+                          {item.description}
                         </Typography>
                       </div>
                     </div>
 
-                    <Grid item sx={{ textAlign: 'right', paddingRight: 0, mt: 1 }}>
-                      <img width={35} src={require('../images/decor.png')} />
+                    <Grid item sx={{ textAlign: "right", paddingRight: 0, mt: 1 }}>
+                      <img width={35} src={require("../images/decor.png")} />
                     </Grid>
                   </Card>
                 </Grid>
