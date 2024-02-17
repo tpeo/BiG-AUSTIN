@@ -161,6 +161,8 @@ export default function Home(props) {
       partners1[]->{
         partnersImages
       },
+      partnerlink,
+      scheduleapp
     }`
     )
       .then(
@@ -175,7 +177,7 @@ export default function Home(props) {
   return (
     <ThemeProvider theme={appTheme}>
       {homeData && (
-        
+
 
 
         <div style={{ height: "100vh" }}>
@@ -575,21 +577,23 @@ export default function Home(props) {
           </Grid>
 
           <Grid container justifyContent="center" sx={{ mb: 15 }}>
-            <Button
-              width="200"
-              variant="contained"
-              disableElevation
-              sx={{
-                mt: 1.5, height: 60, backgroundColor: appTheme.palette.primary.green2, color: appTheme.palette.primary.white, fontSize: 20, mb: 2, fontWeight: 500,
-                '&:hover': {
-                  fontWeight: 700,
-                  backgroundColor: appTheme.palette.primary.green3,
-                  color: appTheme.palette.primary.white,
-                  transition: "all 0.3s ease",
-                },
-              }}>
-              Schedule an Appointment
-            </Button>
+            <Link to={homeData[0].scheduleapp} target="_blank" style={{ textDecoration: 'none' }}>
+              <Button
+                width="200"
+                variant="contained"
+                disableElevation
+                sx={{
+                  mt: 1.5, height: 60, backgroundColor: appTheme.palette.primary.green2, color: appTheme.palette.primary.white, fontSize: 20, mb: 2, fontWeight: 500,
+                  '&:hover': {
+                    fontWeight: 700,
+                    backgroundColor: appTheme.palette.primary.green3,
+                    color: appTheme.palette.primary.white,
+                    transition: "all 0.3s ease",
+                  },
+                }}>
+                Schedule an Appointment
+              </Button>
+            </Link>
           </Grid>
 
 
@@ -715,7 +719,7 @@ export default function Home(props) {
                         {(items.partnersImages).map((item) => (
                           <Grid sx={{ textAlign: "center" }}>
                             <div className="partnersImage">
-                            {console.log(item)}
+                              {console.log(item)}
                               <img width={200}
                                 src={urlFor(item).url()}
                                 alt="Image 1"
@@ -758,22 +762,24 @@ export default function Home(props) {
 
 
           <Grid container direction="column" alignItems="center">
-            <Button
-              width="200"
-              variant="contained"
-              disableElevation
-              sx={{
-                color: appTheme.palette.primary.white, fontSize: 20, mb: 12, fontWeight: 500,
-                backgroundColor: appTheme.palette.primary.green2, height: 50,
-                '&:hover': {
-                  fontWeight: 700,
-                  backgroundColor: appTheme.palette.primary.green3,
-                  color: appTheme.palette.primary.white,
-                  transition: "all 0.3s ease",
-                },
-              }}>
-              Partner With Us
-            </Button>
+            <Link to={homeData[0].partnerlink} target="_blank" style={{ textDecoration: 'none' }}>
+              <Button
+                width="200"
+                variant="contained"
+                disableElevation
+                sx={{
+                  color: appTheme.palette.primary.white, fontSize: 20, mb: 12, fontWeight: 500,
+                  backgroundColor: appTheme.palette.primary.green2, height: 50,
+                  '&:hover': {
+                    fontWeight: 700,
+                    backgroundColor: appTheme.palette.primary.green3,
+                    color: appTheme.palette.primary.white,
+                    transition: "all 0.3s ease",
+                  },
+                }}>
+                Partner With Us
+              </Button>
+            </Link>
           </Grid>
           <BottomBar />
         </div>

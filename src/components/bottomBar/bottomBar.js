@@ -42,6 +42,7 @@ export default function BottomBar() {
 
 
   useEffect(() => {
+  
     createClient.fetch(
       `*[_type == "footer"]{
         address,
@@ -329,7 +330,6 @@ export default function BottomBar() {
 
 
               <Grid item xs>
-                {/* <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div> */}
                 <Card
                   sx={{
                     width: 280,
@@ -349,9 +349,11 @@ export default function BottomBar() {
                       </Typography>
                     </div>
 
-                    {/*signup-form-widget.min.js:30 Div for inline form "Inline Form Created 2022/05/02, 02:15:33 PM" is missing. Was inline code installed? */}
-                    {/* <InlineSignUpForm /> */}
+                 
                     <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
+                       {/*signup-form-widget.min.js:30 Div for inline form "Inline Form Created 2022/05/02, 02:15:33 PM" is missing. Was inline code installed? */}
+                    {/* <InlineSignUpForm /> */}
+
                     {/* <div
                       className="ctct-inline-form"
                       dangerouslySetInnerHTML={{ __html: '<div data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>' }}
