@@ -21,9 +21,24 @@ import createClient from '../../client.js';
 import FormComponent from "../form.js";
 import InlineSignUpForm from "../pages/InlineSignUpForm.js";
 
+
+
+
 export default function BottomBar() {
 
   const [footerData, setFooter] = useState(null);
+
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  //   script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+  //   script.async = true;
+  //   script.defer = true;
+  //   document.body.appendChild(script);
+
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
 
   useEffect(() => {
@@ -46,27 +61,19 @@ export default function BottomBar() {
   )
 
   // useEffect(() => {
-  //   // Code to execute after component is mounted
-  //   if (window.ctctSignupFormObj) {
-  //     window.ctctSignupFormObj.loadForm('d5b9e5f7-9420-4053-a13f-0a884308b4a3');
-  //   }
-  // }, []); // Empty dependency array ensures this effect runs only once after the initial render
+  //   const script = document.createElement('script');
+  //   script.src = '//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js';
+  //   script.async = true;
+  //   script.defer = true;
+  //   document.body.appendChild(script);
 
-  // window.addEventListener("DOMContentLoaded", () => { // when the page has loaded
-  //   container = document.getElementById("orderhtml");
-  //   const pickupDiv = document.getElementById("pickupDiv");
-  //   const deliveryDiv = document.getElementById("deliveryDiv");
-  //   container.addEventListener("click", (event) => {
-  //     const tgt = event.target;
-  //     if (!tgt.matches("[name=chooseDiv]")) return; // not a radio
-  //     const delivery = tgt.id === "delivery";
-  //     deliveryDiv.hidden = !delivery;
-  //     pickupDiv.hidden = delivery
-  //   })
-  // })
+  //   window._ctct_m = "8766f4c8847a61c81bf06cd82f3fd1ae";
 
-
-  
+  //   return () => {
+  //     document.body.removeChild(script);
+  //     window._ctct_m = null;
+  //   };
+  // }, []);
 
 
   return (
@@ -345,6 +352,11 @@ export default function BottomBar() {
                     {/*signup-form-widget.min.js:30 Div for inline form "Inline Form Created 2022/05/02, 02:15:33 PM" is missing. Was inline code installed? */}
                     {/* <InlineSignUpForm /> */}
                     <div class="ctct-inline-form" data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>
+                    {/* <div
+                      className="ctct-inline-form"
+                      dangerouslySetInnerHTML={{ __html: '<div data-form-id="d5b9e5f7-9420-4053-a13f-0a884308b4a3"></div>' }}
+                    ></div> */}
+
 
                     {/* <Box
                     sx={{
@@ -358,7 +370,7 @@ export default function BottomBar() {
                     <Button sx={{ color: appTheme.palette.primary.white, height: "45px", fontSize: 17, backgroundColor: appTheme.palette.primary.green2, fontWeight: 350, borderRadius: 0, paddingLeft: 4, paddingRight: 4 }}>Subscribe</Button>
                   </Box> */}
                     <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Your email is safe with us, we don’t spam.</Typography>
-                    {/* <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Please refresh page if newsletter doesn't load.</Typography> */}
+                    {/* <Typography variant="h2" sx={{ fontSize: 15, mt: 1, color: appTheme.palette.primary.platinum }}>Refresh page if newsletter doesn't load.</Typography> */}
 
 
 
