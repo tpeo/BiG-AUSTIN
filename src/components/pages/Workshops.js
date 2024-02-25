@@ -22,6 +22,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import { appTheme } from "../Theme.js";
 import createClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url'
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 
 const builder = imageUrlBuilder(createClient)
 
@@ -245,8 +247,12 @@ export default function Workshops(props) {
                           color: 'white',
                         }}
                       >
+                        
                         <Typography variant="h1" sx={{ fontSize: 27, padding: 0, mb: 3 }}>{selectedEvent.title}</Typography>
-                        <Typography variant="h2" sx={{ fontSize: 23, padding: 0, mb: 7 }}>{selectedEvent.extendedProps.description}</Typography>
+     
+                        <div style={{ maxHeight: '250px', overflowY: 'scroll' }}>
+                        <Typography variant="h2" sx={{ fontSize: 23, padding: 0, mb: 7 }}> <ReactMarkdown rehypePlugins={[rehypeRaw]} children={selectedEvent.extendedProps.description} /> </Typography>
+                        </div>
                         <Link to={selectedEvent.extendedProps.button} target="_blank" style={{ textDecoration: 'none' }}>
                           <Button
                             width="150"
@@ -254,7 +260,7 @@ export default function Workshops(props) {
                             disableElevation
                             sx={{
                               color: appTheme.palette.primary.white, fontSize: 18, fontWeight: 500,
-                              backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3,
+                              backgroundColor: appTheme.palette.primary.green2, borderRadius: .9, height: 45, mr: 3, mt: 1,
                               '&:hover': {
                                 fontWeight: 700,
                                 backgroundColor: appTheme.palette.primary.green3,
@@ -294,7 +300,7 @@ export default function Workshops(props) {
                       sx={{
                         backgroundColor: appTheme.palette.primary.white,
                         width: 340,
-                        height: 520,
+                        height: 680,
                         borderRadius: 1,
                         margin: "auto",
                         display: "flex",
@@ -336,14 +342,12 @@ export default function Workshops(props) {
                           </Typography>
                         </div>
 
-                        <div>
-                          <Typography
-                            variant="h2"
-                            sx={{ fontSize: 17, mb: 1, width: "90%" }}
-                          >
-                            {items.description}
-                          </Typography>
-                        </div>
+                        <div style={{ maxHeight: '170px', overflowY: 'auto' }}>
+      {/* Adjust maxHeight value according to your need */}
+      <Typography variant="h2" sx={{ fontSize: 17, mb: 1, width: '90%' }}>
+      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={items.description} />
+      </Typography>
+    </div>
                       </div>
 
                       <Grid>

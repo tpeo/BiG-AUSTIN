@@ -122,63 +122,59 @@ export default function DreamTeam(props) {
 
             {selectedTeamMember && (
               <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                disableAutoFocus={true}
-                sx={{ borderRadius: '10px', border: 'none', outline: '0' }}
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+              disableAutoFocus={true}
+              sx={{ borderRadius: '10px', border: 'none', outline: '0' }}
+            >
+              <Grid
+                sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '50%',
+                  bgcolor: 'background.paper',
+                  borderRadius: '10px',
+                  '@media only screen and (max-width: 600px)': {
+                    width: '80%', // Adjust the width for smaller screens
+                  },
+                }}
               >
-                <Grid
-                  sx={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '50%',
-                    bgcolor: 'background.paper',
-                    borderRadius: '10px',
-                    '@media only screen and (max-width: 600px)': {
-                      width: '80%', // Adjust the width for smaller screens
-                    },
-                  }}
-
-                >
-                  <Grid container>
-                    {/* Left side  */}
-                    <Grid item xs={12} sm={5} style={{ backgroundColor: appTheme.palette.primary.blue1, borderRadius: '10px 0 0 10px' }}>
-                      <div className="programs-image-container" style={{ width: "70%", margin: "0 auto", marginTop: "60px", marginBottom: "45px", display: "flex", justifyContent: "center" }}>
-                        <img src={urlFor(selectedTeamMember.image).url()} style={{ width: "220px", height: "220px", objectFit: "cover" }} />
+                <Grid container>
+                  {/* Left side  */}
+                  <Grid item xs={12} sm={5} style={{ backgroundColor: appTheme.palette.primary.blue1, borderRadius: '10px 0 0 10px' }}>
+                    <div className="programs-image-container" style={{ width: "70%", margin: "0 auto", marginTop: "60px", marginBottom: "45px", display: "flex", justifyContent: "center" }}>
+                      <img src={urlFor(selectedTeamMember.image).url()} style={{ width: "220px", height: "220px", objectFit: "cover" }} />
+                    </div>
+            
+                    <div style={{ width: "50%", margin: "0 auto", justifyContent: "center", marginBottom: "75px" }}>
+                      <div style={{ display: 'flex', alignItems: 'center', paddingBottom: 20, width: "100%", margin: "0 auto" }}>
+                        <LocalPhoneIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocalPhoneIcon>
+                        <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{selectedTeamMember.number}</Typography></span>
                       </div>
-
-
-                      <div style={{ width: "50%", margin: "0 auto", justifyContent: "center", marginBottom: "75px" }}>
-                        <div style={{ display: 'flex', alignItems: 'center', paddingBottom: 20, width: "100%", margin: "0 auto" }}>
-                          <LocalPhoneIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></LocalPhoneIcon>
-                          <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{selectedTeamMember.number}</Typography></span>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
-                          <EmailIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></EmailIcon>
-                          <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{selectedTeamMember.email}</Typography></span>
-                        </div>
+                      <div style={{ display: 'flex', alignItems: 'center', width: "100%", margin: "0 auto" }}>
+                        <EmailIcon style={{ border: '4px solid #B6F599', width: 30, height: 30, marginRight: 10 }} sx={{ borderRadius: 5, backgroundColor: appTheme.palette.primary.green3, color: appTheme.palette.primary.footer }}></EmailIcon>
+                        <span><Typography variant="h2" sx={{ fontSize: 18, fontWeight: 300, color: appTheme.palette.primary.platinum, }}>{selectedTeamMember.email}</Typography></span>
                       </div>
-
-
-
-                    </Grid>
-
-                    {/* Right side  */}
-                    <Grid item xs={12} sm={7} style={{ backgroundColor: appTheme.palette.primary.platinum, paddingTop: "60px", paddingLeft: "30px", borderRadius: '0 10px 10px 0', paddingBottom: "75px" }}>
-
-                      <Typography variant="h1" sx={{ fontSize: 25, padding: 0, paddingBottom: 1, fontWeight: 400 }}>{selectedTeamMember.name}</Typography>
-                      <Typography variant="h2" sx={{ fontSize: 17, fontWeight: 400 }}>{selectedTeamMember.description}</Typography>
-
-                      <Typography variant="h2" sx={{ fontSize: 17, mt: 2, fontWeight: 300, width: "92%", }}>      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={selectedTeamMember.blurb} /></Typography>
-
-                    </Grid>
+                    </div>
+                  </Grid>
+            
+                  {/* Right side  */}
+                  <Grid item xs={12} sm={7} style={{ backgroundColor: appTheme.palette.primary.platinum, paddingTop: "60px", paddingLeft: "30px", borderRadius: '0 10px 10px 0', paddingBottom: "75px", overflow: 'auto' }}>
+                    <Typography variant="h1" sx={{ fontSize: 25, padding: 0, paddingBottom: 1, fontWeight: 400 }}>{selectedTeamMember.name}</Typography>
+                    <Typography variant="h2" sx={{ fontSize: 17, fontWeight: 400 }}>{selectedTeamMember.description}</Typography>
+                    <Typography variant="h2" sx={{ fontSize: 17, mt: 2, fontWeight: 300, width: "92%" }}>
+                      <div style={{ overflow: 'auto', maxHeight: '200px' }}> {/* Adjust the maxHeight value as needed */}
+                        <ReactMarkdown rehypePlugins={[rehypeRaw]} children={selectedTeamMember.blurb} />
+                      </div>
+                    </Typography>
                   </Grid>
                 </Grid>
-              </Modal>
+              </Grid>
+            </Modal>            
             )}
 
           </Grid>
