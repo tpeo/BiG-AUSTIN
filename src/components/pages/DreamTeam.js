@@ -187,14 +187,16 @@ export default function DreamTeam(props) {
             <Grid sx={{ height: "auto", mt: 5, mb: 7, paddingTop: "30px" }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
-                <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
+                <Grid container direction="row" md={6.5} sx={{ justifyContent: "center" }}>
                   <Typography variant="h1" sx={{ fontSize: 36, color: "#2C3343" }}>Board of Directors</Typography>
                 </Grid>
               </Grid>
               <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: "#2C3343", width: "50%", margin: "0 auto", mt: 3 }}>{teamData[0].directorsBlurb}</Typography>
             </Grid>
 
-            <Grid container spacing={2} sx={{ width: '60%', margin: '0 auto' }}>
+            <Grid container spacing={2} sx={{ width: '60%', margin: '0 auto', '@media only screen and (max-width: 600px)': {
+                    width: '80%', // Adjust the width for smaller screens
+                  }, }}>
               {teamData[0].directors1.map((item, index) => (
                 <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
                   <Grid container spacing={2}>
