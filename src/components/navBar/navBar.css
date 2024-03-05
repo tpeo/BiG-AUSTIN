@@ -172,7 +172,7 @@ ul li {
 
 header {
   display: grid;
-  grid-template-columns: 100px auto 20px;
+  grid-template-columns: 300px auto 20px;
   grid-template-rows: 60px;
   background: transparent;
 }

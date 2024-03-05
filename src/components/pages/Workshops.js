@@ -122,7 +122,7 @@ export default function Workshops(props) {
             justifyContent: "center",
             margin: "auto",
           }}>
-            <Grid sx={{ height: "auto", width: "55%", mt: 10, mb: 7 }}>
+            <Grid sx={{ height: "auto", width: "55%", mt: 7, mb: 1 }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
@@ -146,7 +146,7 @@ export default function Workshops(props) {
               justifyContent: "center",
               margin: "auto",
               paddingLeft: "0px",
-              paddingBottom: 6,
+              paddingBottom: 4,
 
             }}>
               <Grid sx={{ height: "auto", paddingLeft: "0px", }}>

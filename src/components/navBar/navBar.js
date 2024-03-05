@@ -116,12 +116,12 @@ export default function NavBar() {
         <div className="container-fluid">
           <header>
             <div className="logo">
-              <Link to="/">
-                <img
-                  alt={"logo"}
-                  src={urlFor(navData[0].logo).url()}
-                />
-              </Link>
+            <a href="/">
+  <img
+    alt={"logo"}
+    src={urlFor(navData[0].logo).url()}
+  />
+</a>
             </div>
 
 

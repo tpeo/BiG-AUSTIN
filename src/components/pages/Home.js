@@ -17,7 +17,7 @@ import "../styles.css";
 import { appTheme } from "../Theme.js";
 import createClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url'
-
+import CookieConsent from "react-cookie-consent";
 import ArrowLeftImage from '../images/arrow-left.png'; // Import the left arrow image
 import ArrowRightImage from '../images/arrow-right.png'; // Import the right arrow image
 
@@ -781,6 +781,19 @@ export default function Home(props) {
               </Button>
             </Link>
           </Grid>
+
+          <CookieConsent
+            location="bottom"
+            buttonText="I Agree"
+            cookieName="myAwesomeCookieName2"
+            style={{ background: "#435058", fontFamily: "League Spartan", }}
+            buttonStyle={{ backgroundColor: "#219D80", color: "white", fontSize: "13px", fontFamily: "League Spartan", }}
+            // expires={150}
+          >
+            By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+          </CookieConsent>
+
+
           <BottomBar />
         </div>
       )}

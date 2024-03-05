@@ -30,6 +30,7 @@
     "react-app-polyfill": "^3.0.0",
     "react-bootstrap": "1.6.3",
     "react-bootstrap-modal": "4.2.0",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.0",
     "react-markdown": "^9.0.1",
