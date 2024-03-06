@@ -92,7 +92,7 @@ export default function StartSmart(props) {
             alignItems: "center",
             justifyContent: "center"
           }}>
-            <Grid sx={{ height: "auto", width: "68%", mt: 10, mb: 4 }}>
+            <Grid sx={{ height: "auto", width: "80%", mt: 10, mb: 4 }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={12} xs={9} sx={{ justifyContent: "center" }}>
@@ -101,7 +101,7 @@ export default function StartSmart(props) {
               </Grid>
 
 
-              <div className="programs-image-container" style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+              <div className="programs-image-container" style={{ width: "60%", margin: "0 auto", display: "flex", justifyContent: "center" }}>
                 <img src={urlFor(smartData[0].headingImage).url()} />
               </div>
 
@@ -127,17 +127,14 @@ export default function StartSmart(props) {
                   <img width={45} src={require('../images/decor.png')} />
                 </Typography>
                 <Typography variant="h2" sx={{
-                  fontSize: 24, fontWeight: 200, color: appTheme.palette.primary.space, whiteSpace: 'pre-line',
-                  wordWrap: 'break-word'
-                }}>{smartData[0].paragraph1.split('<br>')
-                  .map((line, index) => (
-                    <span key={index} style={{ display: 'block' }}>{line}</span>
-                  ))}</Typography>
+                  fontSize: 24, fontWeight: 200, color: appTheme.palette.primary.space
+                }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={smartData[0].paragraph1} /> 
+              </Typography>
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid container direction="column" justifyContent="center" alignItems="center" sx={{ mb: 8 }}>
+          <Grid container direction="column" justifyContent="center" alignItems="center" sx={{ }}>
             <Grid container justifyContent="left" sx={{ width: "65%" }}>
               <CssBaseline />
               <Grid container direction="row" sx={{ textAlign: "left" }}>
@@ -154,12 +151,8 @@ export default function StartSmart(props) {
                   <img width={45} src={require('../images/decor.png')} />
                 </Typography>
                 <Typography variant="h2" sx={{
-                  fontSize: 24, fontWeight: 200, mb: 5, color: appTheme.palette.primary.space, whiteSpace: 'pre-line',
-                  wordWrap: 'break-word'
-                }}>{smartData[0].paragraph2.split('<br>')
-                  .map((line, index) => (
-                    <span key={index} style={{ display: 'block' }}>{line}</span>
-                  ))}</Typography>
+                  fontSize: 24, fontWeight: 200, mb: 5, color: appTheme.palette.primary.space
+                }}> <ReactMarkdown rehypePlugins={[rehypeRaw]} children={smartData[0].paragraph2} /> </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -519,7 +512,7 @@ export default function StartSmart(props) {
             <Grid container justifyContent="center" alignItems="center">
               <CssBaseline />
               <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center", mt: 5, mb: 5 }}>
-                <Typography variant="h1" sx={{ fontSize: 25, color: appTheme.palette.primary.white }}>Meet your Instructor</Typography>
+                <Typography variant="h1" sx={{ fontSize: 25, textAlign: "center", color: appTheme.palette.primary.white }}>Meet your Instructor</Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -539,12 +532,10 @@ export default function StartSmart(props) {
                 <Grid>
                   <Typography variant="h1" sx={{ textAlign: "center", fontSize: 21, fontWeight: 500, color: appTheme.palette.primary.white, mb: -1 }}>{smartData[0].instructorName}</Typography>
                   <Typography variant="h2" sx={{
-                    textAlign: "center", fontSize: 18, fontWeight: 400, color: appTheme.palette.primary.white,
-                    wordWrap: 'break-word',
-                  }}>{smartData[0].instructorTitle.split('<br>')
-                    .map((line, index) => (
-                      <span key={index} style={{ display: 'block' }}>{line}</span>
-                    ))}</Typography>
+                    textAlign: "center", fontSize: 18, fontWeight: 400,  color: appTheme.palette.primary.white,
+                  }}>
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={smartData[0].instructorTitle} />
+                  </Typography>
 
                 </Grid>
               </Grid>
@@ -553,12 +544,9 @@ export default function StartSmart(props) {
               <Grid item md={5} xs={12} >
                 <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
                   <Typography variant="h2" sx={{
-                    fontSize: 21, fontWeight: 200, mb: 3, color: appTheme.palette.primary.white, whiteSpace: 'pre-line',
-                    wordWrap: 'break-word',
-                  }}>{smartData[0].instructorDescp.split('<br>')
-                    .map((line, index) => (
-                      <span key={index} style={{ display: 'block' }}>{line}</span>
-                    ))}</Typography>
+                    fontSize: 21, fontWeight: 200, mb: 3, padding: 2,color: appTheme.palette.primary.white
+                  }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={smartData[0].instructorDescp} />  
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
@@ -576,14 +564,11 @@ export default function StartSmart(props) {
                     }}>
 
                         <Typography variant="h1" sx={{ fontSize: 25, textAlign: "center", color: appTheme.palette.primary.blue1 }}>Ready to transform your business dreams into reality?</Typography>
-                        <Typography variant="h2" sx={{ fontSize: 22, fontWeight: 500, color: appTheme.palette.primary.space, letterSpacing: 1, mb: 4, textTransform: "uppercase" }}>Don't miss out on this incredible opportunity. Secure your spot today!</Typography>
+                        <Typography variant="h2" sx={{ fontSize: 22, textAlign: "center", fontWeight: 500, color: appTheme.palette.primary.space, letterSpacing: 1, mb: 4, textTransform: "uppercase" }}>Don't miss out on this incredible opportunity. Secure your spot today!</Typography>
                         <Typography variant="h2" sx={{ fontSize: 22, textAlign: "center", color: appTheme.palette.primary.blue1, lineHeight: "17px",
               }}>
                  <ReactMarkdown rehypePlugins={[rehypeRaw]} children={smartData[0].programDetails} />
-                {/* {smartData[0].programDetails.split('<br>')
-              .map((line, index) => (
-                <span key={index} style={{ display: 'block' }}>{line}</span>
-              ))} */}
+    
               </Typography>
 
                     </Grid>
@@ -619,23 +604,13 @@ export default function StartSmart(props) {
 
               {smartData[0].faq1.map((item) => (
                 <Grid>
-                  {console.log(item)}
                   <Typography variant="h2" sx={{ textAlign: "left", fontSize: 24, fontFamily: "DM Serif Display", fontWeight: 500, mb: 2, color: appTheme.palette.primary.space }}>{item.question}</Typography>
                   <Typography variant="h2" sx={{
-                    fontSize: 24, fontWeight: 200, color: appTheme.palette.primary.space, mb: 3, whiteSpace: 'pre-line',
-                    wordWrap: 'break-word',
-                  }}>{item.answer.split('<br>')
-                    .map((line, index) => (
-                      <span key={index} style={{ display: 'block' }}>{line}</span>
-                    ))}
+                    fontSize: 24, fontWeight: 200, color: appTheme.palette.primary.space, mb: 3
+                  }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.answer} /> 
                   </Typography>
                 </Grid>
-
               ))}
-
-
-
-
             </Grid>
           </Grid>
 

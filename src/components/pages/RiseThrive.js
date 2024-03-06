@@ -55,6 +55,7 @@ export default function RiseThrive(props) {
         title,
         subtext,
         paragraph2,
+        surveyButtontitle,
         surveyButton,
         additionalInfo
     }`
@@ -84,7 +85,7 @@ export default function RiseThrive(props) {
             alignItems: "center",
             justifyContent: "center"
           }}>
-            <Grid sx={{ height: "auto", width: "48%", mt: 10, mb: 4 }}>
+            <Grid sx={{ height: "auto", width: "80%", mt: 10, mb: 4 }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={12} xs={9} sx={{ justifyContent: "center" }}>
@@ -93,7 +94,7 @@ export default function RiseThrive(props) {
               </Grid>
 
 
-              <div className="programs-image-container" style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+              <div className="programs-image-container" style={{margin: "0 auto", width: "50%", display: "flex", justifyContent: "center" }}>
                 <img src={urlFor(riseData[0].headingImage).url()} />
               </div>
 
@@ -119,12 +120,11 @@ export default function RiseThrive(props) {
                   <img width={45} src={require('../images/decor.png')} />
                 </Typography>
                 <Typography variant="h2" sx={{
-                  fontSize: 24, fontWeight: 200, mb: 5, color: appTheme.palette.primary.space, whiteSpace: 'pre-line',
-                  wordWrap: 'break-word',
-                }}>{riseData[0].paragraph1.split('<br>')
-                  .map((line, index) => (
-                    <span key={index} style={{ display: 'block' }}>{line}</span>
-                  ))}</Typography>
+                  fontSize: 24, fontWeight: 200, mb: 5, color: appTheme.palette.primary.space
+                }}>
+                   <ReactMarkdown rehypePlugins={[rehypeRaw]} children={riseData[0].paragraph1} />
+                   
+                  </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -409,12 +409,10 @@ export default function RiseThrive(props) {
             <Typography variant="h1" sx={{ mt: 7, fontSize: 40, textAlign: "center", color: appTheme.palette.primary.white, mb: -2 }}>{riseData[0].title}</Typography>
             <Typography variant="h1" sx={{ fontSize: 23, textAlign: "center", color: appTheme.palette.primary.white }}>{riseData[0].subtext}</Typography>
             <Typography variant="h2" sx={{
-              width: "60%", fontSize: 23, mt: 4, textAlign: "left", color: appTheme.palette.primary.white, whiteSpace: 'pre-line',
-              wordWrap: 'break-word',
-            }}>{riseData[0].paragraph2.split('<br>')
-              .map((line, index) => (
-                <span key={index} style={{ display: 'block' }}>{line}</span>
-              ))}</Typography>
+              width: "60%", fontSize: 23, mt: 4, textAlign: "left", color: appTheme.palette.primary.white
+            }}>                   
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} children= {riseData[0].paragraph2} />
+           </Typography>
 
             <Link to={riseData[0].surveyButton} target="_blank" style={{ textDecoration: 'none' }}>
 
@@ -434,7 +432,7 @@ export default function RiseThrive(props) {
                   mt: 5,
                   mb: 3
                 }}>
-                Take Survey Now
+                {riseData[0].surveyButtontitle}
               </Button>
             </Link>
             <Typography variant="h2" sx={{ width: "50%", mb: 9, fontWeight: 400, fontSize: 20, mt: 4, textAlign: "center", color: appTheme.palette.primary.white }}>{riseData[0].additionalInfo}</Typography>

@@ -99,6 +99,7 @@ export default function Partners(props) {
                 column4image,
                 column4title,
                 column4blurb,
+                partnertitle,
                 partnersButton,
                 partners1[]->{
                     partnersImages
@@ -134,14 +135,14 @@ export default function Partners(props) {
                             alignItems: "center",
                             justifyContent: "center"
                         }}>
-                            <Grid sx={{ height: "auto", width: "48%", mt: 10, mb: 3 }}>
+                            <Grid sx={{ height: "auto", width: "70%", mt: 10, mb: 3 }}>
                                 <Grid container justifyContent="center" alignItems="center">
                                     <CssBaseline />
                                     <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                                         <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{partnersData[0].mainHeading}</Typography>
                                     </Grid>
                                 </Grid>
-                                <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 4 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={partnersData[0].mainBlurb} /> </Typography>
+                                <Typography variant="h2" sx={{width: "55%", margin: "0 auto", fontSize: 20, textAlign: "center", mb: 4 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={partnersData[0].mainBlurb} /> </Typography>
 
 
                             </Grid>
@@ -435,7 +436,7 @@ export default function Partners(props) {
                                             transition: "all 0.3s ease",
                                         },
                                     }}>
-                                    Partner With Us
+                                    {partnersData[0].partnertitle}
                                 </Button>
                             </Link>
                         </Grid>

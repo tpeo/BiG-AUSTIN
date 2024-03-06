@@ -36,7 +36,9 @@ export default function Lending(props) {
                 mainBlurb,
                 headingImage,
                 headingBlurb,
+                leftButtontitle,
                 leftButton,
+                rightButtontitle,
                 rightButton,
                 topTitle,
                 topText,
@@ -99,7 +101,7 @@ export default function Lending(props) {
                                     <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{lendingData[0].mainHeading}</Typography>
                                 </Grid>
                             </Grid>
-                            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 4 }}>{lendingData[0].mainBlurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 4 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].mainBlurb} /> </Typography>
 
                             <div className="programs-image-container" style={{ width: "100%", display: "flex", justifyContent: "center" }}>
                                 <img src={urlFor(lendingData[0].headingImage).url()} />
@@ -119,7 +121,7 @@ export default function Lending(props) {
                             <Grid container justifyContent="center" alignItems="center" sx={{ mb: 2 }}>
                                 <CssBaseline />
                                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                                    <Typography variant="h2" sx={{ fontSize: 22, color: appTheme.palette.primary.green1, textAlign: "center" }}>{lendingData[0].headingBlurb}</Typography>
+                                    <Typography variant="h2" sx={{ fontSize: 22, color: appTheme.palette.primary.green1, textAlign: "center" }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].headingBlurb} /> </Typography>
                                 </Grid>
                             </Grid>
 
@@ -144,7 +146,7 @@ export default function Lending(props) {
                                                 marginBottom: 2, // Adjust the width for smaller screens
                                             },
                                         }}>
-                                        Schedule an Appointment
+                                        {lendingData[0].leftButtontitle}
                                     </Button>
                                 </Link>
 
@@ -164,7 +166,7 @@ export default function Lending(props) {
                                                 transition: "all 0.3s ease",
                                             },
                                         }}>
-                                        Start your Application
+                                        {lendingData[0].rightButtontitle}
                                     </Button>
                                 </Link>
                             </Grid>
@@ -190,7 +192,7 @@ export default function Lending(props) {
                                         <span style={{ paddingRight: 17 }}>{lendingData[0].topTitle}</span>
                                         <img width={45} src={require('../images/decor.png')} />
                                     </Typography>
-                                    <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3, color: appTheme.palette.primary.white, }}>{lendingData[0].topText}</Typography>
+                                    <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3, color: appTheme.palette.primary.white,}}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={lendingData[0].topText} /> </Typography>
                                 </Grid>
                             </Grid>
 
@@ -214,7 +216,8 @@ export default function Lending(props) {
 
                     <Grid container justifyContent="center" alignItems="center" style={{ paddingTop: 30, paddingBottom: 100, backgroundColor: appTheme.palette.primary.blue1 }}>
                         <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
-                            <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'left', alignItems: 'left', padding: 5 }}>
+                            <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 5  }}>
+                                
                                 <img
                                     className="squareImage"
                                     src={urlFor(lendingData[0].bottomImage).url()}
@@ -540,7 +543,7 @@ export default function Lending(props) {
                                         <Card
                                             sx={{
                                                 backgroundColor: appTheme.palette.primary.green5,
-                                                height: 400,
+                                                height: 450,
                                                 width: 280,
                                                 boxShadow: "none",
                                                 borderRadius: 1,
@@ -577,7 +580,7 @@ export default function Lending(props) {
                                         <Card
                                             sx={{
                                                 backgroundColor: appTheme.palette.primary.green5,
-                                                height: 400,
+                                                height: 450,
                                                 width: 280,
                                                 boxShadow: "none",
                                                 borderRadius: 1,
@@ -612,7 +615,7 @@ export default function Lending(props) {
                                         <Card
                                             sx={{
                                                 backgroundColor: appTheme.palette.primary.green5,
-                                                height: 400,
+                                                height: 450,
                                                 width: 280,
                                                 boxShadow: "none",
                                                 borderRadius: 1,

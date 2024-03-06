@@ -37,6 +37,7 @@ export default function CoffeeTalk(props) {
                 headingImage,
                 mainParagraph,
                 buttonLink,
+                buttonTitle,
                 speakersBlurb,
                 speakers,
     }`
@@ -89,7 +90,7 @@ export default function CoffeeTalk(props) {
                             </Grid>
 
                             <Grid item md={4} xs={12} >
-                                <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
+                                <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left", padding: 4 }}>
                                     <Typography variant="h2" sx={{
                                         fontSize: 21, fontWeight: 200, mb: 3, color: appTheme.palette.primary.black, whiteSpace: 'pre-line',
                                     }}>
@@ -111,7 +112,7 @@ export default function CoffeeTalk(props) {
                                                     transition: "all 0.3s ease",
                                                 },
                                             }}>
-                                            Join Our Coffee Talks
+                                            {coffeeData[0].buttonTitle}
                                         </Button>
                                     </Link>
                                 </Grid>
@@ -148,7 +149,7 @@ export default function CoffeeTalk(props) {
                                         <img width={40} src={require('../images/decor.png')} />
                                     </Typography>                                </Grid>
                             </Grid>
-                            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: appTheme.palette.primary.white }}>{coffeeData[0].speakersBlurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: appTheme.palette.primary.white }}> <ReactMarkdown rehypePlugins={[rehypeRaw]} children={coffeeData[0].speakersBlurb} /> </Typography>
                         </Grid>
 
 
@@ -160,7 +161,7 @@ export default function CoffeeTalk(props) {
                             alignItems: "center",
                             justifyContent: "center",
                             width: "50%",
-                            margin: "auto",
+                            margin: "0 auto",
                             mb: 12
                         }}>
                             <Grid container spacing={5}>

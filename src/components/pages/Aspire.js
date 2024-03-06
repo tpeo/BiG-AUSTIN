@@ -91,6 +91,7 @@ export default function Aspire(props) {
                 mainBlurb,
                 headingVideo,
                 buttonLink,
+                buttonTitle,
                 card1title,
                 card1image,
                 card1text,
@@ -139,7 +140,7 @@ export default function Aspire(props) {
                                     <Typography variant="h1" sx={{ fontSize: 40, textAlign: "center", color: appTheme.palette.primary.green1 }}>{aspireData[0].mainHeading}</Typography>
                                 </Grid>
                             </Grid>
-                            <Typography variant="h2" sx={{ fontSize: 22, width: "60%", margin: "0 auto", textAlign: "center", mb: 7 }}>{aspireData[0].mainBlurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 22, width: "60%", margin: "0 auto", textAlign: "center", mb: 7 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={aspireData[0].mainBlurb} />  </Typography>
 
 
                             <div className="programs-image-container" style={{ width: "50%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
@@ -148,7 +149,7 @@ export default function Aspire(props) {
                             </div>
 
                             <Grid container justifyContent="center" alignItems="center" sx={{ mb: 3, mt: 5 }}>
-                                <Link to={""} target="_blank" style={{ textDecoration: 'none' }}>
+                                <Link to={aspireData[0].buttonLink} target="_blank" style={{ textDecoration: 'none' }}>
                                     <Button
                                         width="200"
                                         height="40"
@@ -164,7 +165,7 @@ export default function Aspire(props) {
                                                 transition: "all 0.3s ease",
                                             },
                                         }}>
-                                        Sign up for Updates
+                                        {aspireData[0].buttonTitle}
                                     </Button>
                                 </Link>
 
@@ -352,7 +353,7 @@ export default function Aspire(props) {
                                                 <Typography variant="h2" sx={{ textAlign: "center", fontWeight: 500, color: appTheme.palette.primary.blue1, fontSize: 17, mb: 3, mt: 1, textTransform: "uppercase" }}>{item.date}</Typography>
 
                                                 <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
-                                                    <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1 }}>{item.description}</Typography>
+                                                    <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, color: appTheme.palette.primary.blue1 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.description} />  </Typography>
                                                 </Grid>
                                             </Grid>
                                         </Grid>

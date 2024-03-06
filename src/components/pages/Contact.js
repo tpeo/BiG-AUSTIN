@@ -88,14 +88,14 @@ export default function Contact(props) {
             alignItems: "center",
             justifyContent: "center"
           }}>
-            <Grid sx={{ height: "auto", width: "60%", mt: 10, mb: 2 }}>
+            <Grid sx={{ height: "auto", width: "100%", mt: 10, mb: 2 }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                   <Typography variant="h1" sx={{ fontSize: 44, color: appTheme.palette.primary.blue1 }}>{contactData[0].mainHeading}</Typography>
                 </Grid>
               </Grid>
-              <Typography variant="h2" sx={{ fontSize: 22, textAlign: "center", mb: 4 }}>{contactData[0].mainBlurb}</Typography>
+              <Typography variant="h2" sx={{ width: "60%", margin: "0 auto", fontSize: 22, textAlign: "center", mb: 1 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={contactData[0].mainBlurb} />  </Typography>
 
 
             </Grid>
@@ -158,8 +158,8 @@ export default function Contact(props) {
                 </Grid>
               </Grid>
 
-              <Grid item md={4} xs={12}>
-                <Grid sx={{ marginLeft: "80px" }}>
+              <Grid item md={3} xs={12}>
+                <Grid sx={{ paddingLeft: 3}}>
                   <img
                     src={urlFor(contactData[0].buildingImage).url()}
 
@@ -168,7 +168,7 @@ export default function Contact(props) {
                       left: 0,
                       width: 350,
                       margin: "auto",
-                      marginBottom: 20,
+                      marginBottom: 40,
                       borderRadius: '15px',
                       boxShadow: "5px 5px 0 rgb(182, 245, 153)"
                     }}

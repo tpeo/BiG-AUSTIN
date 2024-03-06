@@ -43,7 +43,7 @@ function Arrow(props) {
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow1 ${props.left ? "arrow1--left" : "arrow1--right"
+      className={`arrow3 ${props.left ? "arrow3--left" : "arrow3--right"
         } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -117,19 +117,18 @@ export default function Youth(props) {
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                  <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{youthData[0].mainHeading}</Typography>
+                  <Typography variant="h1" sx={{  textAlign: "center",fontSize: 40, color: appTheme.palette.primary.green1 }}>{youthData[0].mainHeading}</Typography>
                 </Grid>
               </Grid>
               <Typography variant="h2" sx={{
-                fontSize: 20, margin: "0 auto", width: "75%", textAlign: "center", mb: 7, whiteSpace: 'pre-line',
-                wordWrap: 'break-word',
-              }}>{youthData[0].mainBlurb.split('<br>')
-                .map((line, index) => (
-                  <span key={index} style={{ display: 'block' }}>{line}</span>
-                ))}</Typography>
+                fontSize: 20, margin: "0 auto", width: "75%", textAlign: "center", mb: 7
+                
+              }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={youthData[0].mainBlurb} /> 
+              
+             </Typography>
 
 
-              <div className="programs-image-container" style={{ width: "50%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
+              <div className="programs-image-container" style={{ width: "70%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
                 {/* <img src={urlFor(aspireData[0].headerImage).url()} /> */}
                 <iframe style={{ borderRadius: '10px' }} width="100%" height="315" src={youthData[0].headingVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
@@ -143,7 +142,7 @@ export default function Youth(props) {
 
 
           <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.green4, textAlign: "center", color: "white", marginTop: 40 }}>
-            <h2 style={{ color: appTheme.palette.primary.white, paddingTop: 50 }}>Photo Gallery</h2>
+            <h2 style={{ color: appTheme.palette.primary.white, paddingTop: 50, paddingBottom: 53 }}>Photo Gallery</h2>
             <div className="navigation-wrapper">
               <div ref={sliderRef} className="keen-slider">
                 {youthData[0].photos.map((items) => (

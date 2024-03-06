@@ -162,7 +162,9 @@ export default function Home(props) {
       partners1[]->{
         partnersImages
       },
+      partnertitle,
       partnerlink,
+      scheduleappbutton,
       scheduleapp
     }`
     )
@@ -595,7 +597,7 @@ export default function Home(props) {
                     transition: "all 0.3s ease",
                   },
                 }}>
-                Schedule an Appointment
+                {homeData[0].scheduleappbutton}
               </Button>
             </Link>
           </Grid>
@@ -779,7 +781,7 @@ export default function Home(props) {
                     transition: "all 0.3s ease",
                   },
                 }}>
-                Partner With Us
+                {homeData[0].partnertitle}
               </Button>
             </Link>
           </Grid>

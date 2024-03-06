@@ -126,7 +126,7 @@ export default function NavBar() {
 
 
               {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}> */}
-              <Box className="menubuttonbox" sx={{ flexGrow: 1}}>
+              <Box className="menubuttonbox">
                 <div className="menubutton">
                   <IconButton className="icon"
                     size="large"
@@ -161,7 +161,8 @@ export default function NavBar() {
                 >
 
                   <List
-                    sx={{ width: 200, maxWidth: 500, bgcolor: "#435058", fontFamily: "League Spartan" }}
+                    className="sitenav"
+                    sx={{ width: 200, maxWidth: 500, bgcolor: "#43058", fontFamily: "League Spartan" }}
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                   >

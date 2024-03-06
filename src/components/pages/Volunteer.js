@@ -79,10 +79,10 @@ export default function Volunteer(props) {
                             <Grid container justifyContent="center" alignItems="center">
                                 <CssBaseline />
                                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                                    <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.blue1 }}>{volunteerData[0].mainHeading}</Typography>
+                                    <Typography variant="h1" sx={{textAlign: "center",  fontSize: 40, color: appTheme.palette.primary.blue1 }}>{volunteerData[0].mainHeading}</Typography>
                                 </Grid>
                             </Grid>
-                            <Typography variant="h2" sx={{ fontSize: 20, width: "60%", margin: "0 auto", textAlign: "center", mb: 5, color: "#444444" }}>{volunteerData[0].mainBlurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 20, width: "60%", margin: "0 auto", textAlign: "center", mb: 5, color: "#444444" }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={volunteerData[0].mainBlurb} />  </Typography>
 
 
                             <div className="programs-image-container" style={{ width: "50%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
@@ -182,8 +182,8 @@ export default function Volunteer(props) {
                         justifyContent: "center",
                         mb: 4
                     }}>
-                        <Typography variant="h2" sx={{ width: "60%", fontSize: 23, mt: 4, textAlign: "center", color: appTheme.palette.primary.space }}>{volunteerData[0].volunteerBlurb1}</Typography>
-                        <Typography variant="h2" sx={{ width: "60%", fontSize: 23, mt: 4, textAlign: "center", color: appTheme.palette.primary.space }}>{volunteerData[0].volunteerBlurb2}</Typography>
+                        <Typography variant="h2" sx={{ width: "60%", fontSize: 23, mt: 4, textAlign: "center", color: appTheme.palette.primary.space }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={volunteerData[0].volunteerBlurb1} />  </Typography>
+                        <Typography variant="h2" sx={{ width: "60%", fontSize: 23, mt: 2, textAlign: "center", color: appTheme.palette.primary.space }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={volunteerData[0].volunteerBlurb2} /></Typography>
 
 
 

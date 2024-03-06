@@ -214,7 +214,7 @@ export default function Workshops(props) {
                       left: '50%',
                       transform: 'translate(-50%, -50%)',
                       width: '50%',
-                      height: '70%',
+                      height: '75%',
                       bgcolor: 'background.paper',
                       borderRadius: '10px',
                       overflow: 'hidden',

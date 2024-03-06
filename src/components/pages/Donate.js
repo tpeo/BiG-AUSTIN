@@ -36,6 +36,7 @@ export default function Donate(props) {
         donateImage1,
         donate2,
         donateImage2,
+        donateButtonTitle,
         donateButton
     }`
     )
@@ -58,22 +59,33 @@ export default function Donate(props) {
             <NavBar />
           </Grid>
 
-          <Grid sx={{ height: "auto", mt: 10, mb: 9 }}>
-            <Grid container justifyContent="center" alignItems="center">
-              <CssBaseline />
-              <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                <Typography variant="h1" sx={{ fontSize: 40 }}>{donateData[0].mainHeading}</Typography>
-                <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 350 }}>{donateData[0].mainBlurb}</Typography>
+
+          <Grid item xs sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center"
+          }}>
+            <Grid sx={{ height: "auto", width: "80%", mt: 10 }}>
+              <Grid container justifyContent="center" alignItems="center">
+                <CssBaseline />
+                <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
+                  <Typography variant="h1" sx={{ textAlign: "center", fontSize: 40, color: appTheme.palette.primary.blue1 }}>{donateData[0].mainHeading}</Typography>
+                </Grid>
               </Grid>
+              <Typography variant="h2" sx={{ fontSize: 20, width: "60%", margin: "0 auto", textAlign: "center", color: "#444444" }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={donateData[0].mainBlurb} />  </Typography>
+
+
             </Grid>
           </Grid>
 
-          
 
 
-          <Grid container justifyContent="center" alignItems="center" style={{ height: "auto", mt: 3 }}>
-            <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "90%" }}>
-              <Grid item md={4} xs={12} >
+
+
+          <Grid container justifyContent="center" alignItems="center" style={{ height: "auto"}}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
+              <Grid item md={4} xs={12} sx={{ paddingLeft: 5, paddingRight: 5 }}>
                 <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
                   <Typography variant="h1" sx={{
                     display: 'flex',
@@ -88,13 +100,9 @@ export default function Donate(props) {
                     <img width={45} src={require('../images/decor.png')} />
                   </Typography>
                   <Typography variant="h2" sx={{
-                    fontSize: 20, fontWeight: 200, mb: 3, whiteSpace: 'pre-line',
-                    wordWrap: 'break-word',
-                  }}>{donateData[0].donate1
-                    .split('<br>')
-                    .map((line, index) => (
-                      <span key={index} style={{ display: 'block' }}>{line}</span>
-                    ))}
+                    fontSize: 20, fontWeight: 200, mb: 3
+                  }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children= {donateData[0].donate1} />
+                   
                   </Typography>
                 </Grid>
               </Grid>
@@ -117,7 +125,7 @@ export default function Donate(props) {
 
 
 
-          <Grid container justifyContent="center" alignItems="center" style={{ paddingBottom: 100 }}>
+          <Grid container justifyContent="center" alignItems="center" style={{ paddingBottom: 50 }}>
             <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
 
 
@@ -151,13 +159,9 @@ export default function Donate(props) {
                     <img width={45} src={require('../images/decor.png')} />
                   </Typography>
                   <Typography variant="h2" sx={{
-                    fontSize: 20, fontWeight: 200, mb: 3, whiteSpace: 'pre-line',
-                    wordWrap: 'break-word',
-                  }}>{donateData[0].donate2
-                    .split('<br>')
-                    .map((line, index) => (
-                      <span key={index} style={{ display: 'block' }}>{line}</span>
-                    ))}
+                    fontSize: 20, fontWeight: 200, mb: 3
+                  }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children= {donateData[0].donate2} />
+          
                   </Typography>
                 </Grid>
               </Grid>
@@ -190,7 +194,7 @@ export default function Donate(props) {
                     transition: "all 0.3s ease",
                   },
                 }}>
-                Donate Now
+                {donateData[0].donateButtonTitle}
               </Button>
             </Link>
           </Grid>

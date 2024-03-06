@@ -84,7 +84,7 @@ export default function Services(props) {
                   <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{servicesData[0].mainHeading}</Typography>
                 </Grid>
               </Grid>
-              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 8 }}>{servicesData[0].mainBlurb}</Typography>
+              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={servicesData[0].mainBlurb} /> </Typography>
 
               <Grid container justifyContent="center" alignItems="center">
                 <div className="programs-image-container" style={{ width: "80%", display: "flex", justifyContent: "center" }}>
@@ -317,20 +317,15 @@ export default function Services(props) {
                   </Typography>
                   <Typography
                     variant="h2"
+                    className="bulletpoints"
                     sx={{
                       fontSize: 22,
                       fontWeight: 200,
                       mb: 3,
                       color: appTheme.palette.primary.black,
-                      whiteSpace: 'pre-line',
-                      wordWrap: 'break-word',
                     }}
                   >
-                    {servicesData[0].programText
-                      .split('<br>')
-                      .map((line, index) => (
-                        <span key={index} style={{ display: 'block' }}>{line}</span>
-                      ))}
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]} children={servicesData[0].programText} />
                   </Typography>
                   <Link to={servicesData[0].programLink} target="_blank" style={{ textDecoration: 'none' }}>
                     <Button

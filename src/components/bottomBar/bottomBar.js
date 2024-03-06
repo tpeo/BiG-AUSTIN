@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { appTheme } from "../Theme.js";
-import "../styles.css";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';

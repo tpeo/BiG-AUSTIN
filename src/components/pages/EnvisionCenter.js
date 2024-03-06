@@ -78,13 +78,13 @@ export default function EnvisionCenter(props) {
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                  <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.green1 }}>{envisionData[0].mainHeading}</Typography>
+                  <Typography variant="h1" sx={{ textAlign: "center", fontSize: 40, color: appTheme.palette.primary.green1 }}>{envisionData[0].mainHeading}</Typography>
                 </Grid>
               </Grid>
-              <Typography variant="h2" sx={{ fontSize: 20, margin: "0 auto", width: "65%", textAlign: "center", mb: 3 }}>{envisionData[0].mainBlurb}</Typography>
+              <Typography variant="h2" sx={{ fontSize: 20, margin: "0 auto", width: "65%", textAlign: "center", mb: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={envisionData[0].mainBlurb} /> </Typography>
 
 
-              <div className="programs-image-container" style={{ width: "50%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
+              <div className="programs-image-container" style={{ width: "70%", display: "flex", margin: "0 auto", justifyContent: "center" }}>
                 {/* <img src={urlFor(aspireData[0].headerImage).url()} /> */}
                 <iframe style={{ borderRadius: '10px' }} width="100%" height="315" src={envisionData[0].headingVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               </div>
@@ -104,21 +104,21 @@ export default function EnvisionCenter(props) {
               <Grid container justifyContent="center" alignItems="center" sx={{ mb: 2 }}>
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
-                  <Typography variant="h2" sx={{ fontSize: 22, color: appTheme.palette.primary.green1, textAlign: "center" }}>{envisionData[0].videoCaption}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: 22, color: appTheme.palette.primary.green1, textAlign: "center" }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={envisionData[0].videoCaption} />  </Typography>
                 </Grid>
               </Grid>
 
 
 
 
-              <Grid container justifyContent="center" alignItems="center">
-                <Grid sx={{ mr: 10, width: "20%" }}>
-                  <Typography variant="h1" sx={{ fontSize: 25, textAlign: "center", color: appTheme.palette.primary.blue1 }}>Vision Statement</Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 3 }}>{envisionData[0].visionStatement}</Typography>
+              <Grid container justifyContent="center" alignItems="center" sx={{ paddingLeft: 10, paddingRight: 10 }}>
+                <Grid item xs={12} sm={6} sx={{ width: "20%", textAlign: "center" }}>
+                  <Typography variant="h1" sx={{ fontSize: 25, color: appTheme.palette.primary.blue1 }}>Vision Statement</Typography>
+                  <Typography variant="h2" sx={{  width: "60%", margin: "0 auto", fontSize: 20, mb: 3 }}>{envisionData[0].visionStatement}</Typography>
                 </Grid>
-                <Grid sx={{ width: "20%" }}>
-                  <Typography variant="h1" sx={{ fontSize: 25, textAlign: "center", color: appTheme.palette.primary.blue1 }}>Mission Statement</Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", mb: 3 }}>{envisionData[0].missionStatement}</Typography>
+                <Grid item xs={12} sm={6} sx={{ width: "20%", textAlign: "center", '@media (max-width:600px)': { width: '100%' } }}>
+                  <Typography variant="h1" sx={{ fontSize: 25, color: appTheme.palette.primary.blue1 }}>Mission Statement</Typography>
+                  <Typography variant="h2" sx={{  width: "60%", margin: "0 auto",fontSize: 20, mb: 3 }}>{envisionData[0].missionStatement}</Typography>
                 </Grid>
               </Grid>
             </Grid>

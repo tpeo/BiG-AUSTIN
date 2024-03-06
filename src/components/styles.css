@@ -86,9 +86,7 @@
   
 }
 
-ul li {
-  margin-top: 5px !important;
-}
+
 a {
   list-style-type: none;
 
@@ -424,6 +422,56 @@ input::placeholder {
 
 
 
+
+.arrow3 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%);
+  -webkit-transform: translateY(-50%); */
+  fill: #2C3343;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the background round */
+  background-color: #B6F599; /* Sets the background color to green */
+  border: 10px solid #B6F599; /* Adjust thickness by changing the border width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow3--left {
+  left: 190px;
+}
+
+.arrow3--right {
+  left: auto;
+  right: 190px;
+}
+
+
+@media screen and (max-width: 1312px) {
+  .arrow3--left {
+    left: 280px;
+  }
+  
+  .arrow3--right {
+    left: auto;
+    right: 280px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .arrow3--left {
+    left: 40px;
+  }
+  
+  .arrow3--right {
+    left: auto;
+    right: 40px;
+  }
+}
+
 .dots1 {
   display: flex;
   padding: 20px 0;
@@ -476,8 +524,18 @@ input::placeholder {
   font-weight: 300 !important;
   padding-top: 0px;
   /* margin-left: 0px; */
+  margin-top: -10px !important;
   list-style-type: disc;
 }
+ul li {
+  margin-top: 5px !important;
+}
+/* 
+
+
+.bulletpoints ul li{
+  margin-top: -10px !important;
+} */
 
 .partnersImage img{
   padding-left: 20px;

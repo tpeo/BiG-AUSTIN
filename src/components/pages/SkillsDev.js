@@ -63,20 +63,27 @@ export default function SkillsDev(props) {
                         <NavBar />
                     </Grid>
 
-                    <Grid sx={{ height: "auto", mt: 10 }}>
+                    <Grid item xs sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center"
+                    }}>
+                    <Grid sx={{ height: "auto",width: "100%", mt: 10 }}>
                         <Grid container justifyContent="center" alignItems="center">
                             <CssBaseline />
                             <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                                 <Typography variant="h1" sx={{ fontSize: 40, color: appTheme.palette.primary.blue1 }}>{skillsData[0].mainHeading}</Typography>
-                                <Typography variant="h2" sx={{ fontSize: 20, textTransform: "uppercase", fontWeight: 500, color: appTheme.palette.primary.blue1 }}>{skillsData[0].mainBlurb}</Typography>
-
+                                <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", textTransform: "uppercase", fontWeight: 500, color: appTheme.palette.primary.blue1 }}>{skillsData[0].mainBlurb}</Typography>
                             </Grid>
                         </Grid>
                     </Grid>
+                    </Grid>
+
                     <Grid container justifyContent="center" alignItems="center" sx={{ height: "auto", mt: 5, mb: 14 }}>
                         <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%", margin: "auto" }}>
                             <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <Grid sx={{ textAlign: 'center' }}>
+                                <Grid sx={{ textAlign: 'center', mb: 4, mt: 3}}>
                                     <img className="squareImage1"
                                         src={urlFor(skillsData[0].leftImage).url()}
                                         alt="Logo"
@@ -110,7 +117,7 @@ export default function SkillsDev(props) {
                             </Grid>
 
                             <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                <Grid sx={{ textAlign: 'center' }}>
+                                <Grid sx={{ textAlign: 'center', mb: 4, mt: 3 }}>
                                     <img className="squareImage"
                                         src={urlFor(skillsData[0].rightImage).url()}
                                         style={{
@@ -152,7 +159,7 @@ export default function SkillsDev(props) {
                         justifyContent: "center",
                         backgroundColor: appTheme.palette.primary.blue1,
                         mt: 5,
-                        paddingBottom: 10
+                        paddingBottom: 5
                     }}>
 
                         <Grid sx={{ height: "auto", width: "45%", paddingTop: 8 }}>

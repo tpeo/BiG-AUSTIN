@@ -69,8 +69,8 @@ export default function About(props) {
 
 
           <Grid container justifyContent="center" alignItems="center" style={{ height: "auto", mt: 3 }}>
-            <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "90%" }}>
-              <Grid item md={4} xs={12} >
+            <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ width: "100%" }}>
+              <Grid item md={4} xs={12} sx={{ paddingLeft: 5, paddingRight: 5 }}>
                 <Grid container justifyContent="flex-start" alignItems="center" direction="row" sx={{ textAlign: "left" }}>
                   <Typography variant="h1" sx={{
                     display: 'flex',
