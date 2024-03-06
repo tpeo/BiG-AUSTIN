@@ -12,6 +12,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import { appTheme } from "../Theme.js";
 import createClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url'
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 
 
 export default function About(props) {
@@ -31,11 +33,9 @@ export default function About(props) {
         mainHeading,
         mainBlurb,
         headerImage,
-        mission1,
-        mission2,
+        mission,
         missionImage,
-        history1,
-        history2,
+        history,
         historyImage
     }`
     )
@@ -62,7 +62,7 @@ export default function About(props) {
               <CssBaseline />
               <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                 <Typography variant="h1" sx={{ fontSize: 40 }}>{aboutData[0].mainHeading}</Typography>
-                <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 350 }}>{aboutData[0].mainBlurb}</Typography>
+                <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 350 }}> <ReactMarkdown rehypePlugins={[rehypeRaw]} children={aboutData[0].mainBlurb} /> </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -84,8 +84,7 @@ export default function About(props) {
                     <span style={{ paddingRight: 17 }}>Our Mission</span>
                     <img width={45} src={require('../images/decor.png')} />
                   </Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3 }}>{aboutData[0].mission1}</Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200 }}>{aboutData[0].mission2}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={aboutData[0].mission} /> </Typography>
                 </Grid>
               </Grid>
 
@@ -139,8 +138,7 @@ export default function About(props) {
                     <span style={{ paddingRight: 17 }}>Our History</span>
                     <img width={45} src={require('../images/decor.png')} />
                   </Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3 }}>{aboutData[0].mission1}</Typography>
-                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200 }}>{aboutData[0].mission2}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: 20, fontWeight: 200, mb: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={aboutData[0].history} /> </Typography>
                 </Grid>
               </Grid>
             </Grid>

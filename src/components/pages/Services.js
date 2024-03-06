@@ -7,6 +7,8 @@ import {
   Button,
   Grid,
 } from "@mui/material";
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 import BottomBar from "../bottomBar/bottomBar.js";
 import NavBar from "../navBar/navBar.js";
 import "../styles.css";

@@ -17,7 +17,8 @@ import ArrowLeftImage from '../images/arrow-left.png'; // Import the left arrow 
 import ArrowRightImage from '../images/arrow-right.png'; // Import the right arrow image
 import imageUrlBuilder from '@sanity/image-url'
 import { useKeenSlider } from "keen-slider/react"
-
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 
 const builder = imageUrlBuilder(createClient)
 

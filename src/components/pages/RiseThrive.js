@@ -14,7 +14,8 @@ import { appTheme } from "../Theme.js";
 import createClient from '../../client.js';
 import imageUrlBuilder from '@sanity/image-url'
 import { Link } from 'react-router-dom';
-
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 const builder = imageUrlBuilder(createClient)
 
 function urlFor(source) {

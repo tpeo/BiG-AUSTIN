@@ -240,3 +240,27 @@ header {
 .css-vubbuv{
   color: white !important;
 }
+
+@media (min-width: 1252px) {
+  /* .menu{
+    display: block;
+  } */
+  .menubuttonbox{
+    display: none !important;
+  }
+  nav{
+    display: block !important;
+  }
+}
+
+@media (max-width: 1252px) {
+  .menu{
+    display: flex !important;
+  }
+  /* .menubuttonbox{
+    display: flex !important;
+  } */
+  nav{
+    display: none !important;
+  }
+}

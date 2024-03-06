@@ -7,6 +7,8 @@ import "./Pages.css"
 import headerBackgroundImage from "../images/backgroundheader2.png"
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 const { Title} = Typography;
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 
 export default function About(props) {
   return (

@@ -24,16 +24,22 @@ export const appTheme = createTheme({
   typography: {
     h1: {
       fontFamily: "DM Serif Display",
+      whiteSpace: 'pre-wrap',
     },
     h2: {
       fontFamily: "League Spartan",
+      whiteSpace: 'pre-wrap',
     },
     button: {
       textTransform: "none",
       fontFamily: "League Spartan",
       fontWeight: 600,
       height: 45,
+      
     },
+    p: {
+      whiteSpace: 'pre-wrap',
+    }
   },
   shape: {
     borderRadius: 9, // defaults to 4

@@ -20,9 +20,10 @@ import imageUrlBuilder from '@sanity/image-url'
 import CookieConsent from "react-cookie-consent";
 import ArrowLeftImage from '../images/arrow-left.png'; // Import the left arrow image
 import ArrowRightImage from '../images/arrow-right.png'; // Import the right arrow image
-
+import ReactMarkdown from 'react-markdown';
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import rehypeRaw from "rehype-raw";
 
 
 // Custom arrow components
@@ -188,7 +189,7 @@ export default function Home(props) {
               <CssBaseline />
               <Grid container direction="row" sx={{ mt: 15, textAlign: "center", width: 800 }}>
                 <Typography variant="h1" sx={{ fontSize: 50, fontWeight: 500, lineHeight: 1, color: appTheme.palette.primary.white }}>{homeData[0].mainHeading}</Typography>
-                <Typography variant="h2" sx={{ font: 'League Spartan', fontSize: 30, fontWeight: 500, color: appTheme.palette.primary.white }}>{homeData[0].mainBlurb}</Typography>
+                <Typography variant="h2" sx={{ font: 'League Spartan', fontSize: 30, fontWeight: 500, color: appTheme.palette.primary.white }}>  <ReactMarkdown rehypePlugins={[rehypeRaw]} children={homeData[0].mainBlurb} /> </Typography>
               </Grid>
 
               <Grid container direction="column" alignItems="center">
@@ -230,7 +231,7 @@ export default function Home(props) {
                   <span style={{ paddingRight: 17 }}>About Us</span>
                   <img width={45} src={require('../images/decor.png')} />
                 </Typography>
-                <Typography variant="h2" sx={{ fontSize: 25, fontWeight: 200 }}>{homeData[0].about}</Typography>
+                <Typography variant="h2" sx={{ fontSize: 25, fontWeight: 200 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={homeData[0].about} /> </Typography>
               </Grid>
 
               <Grid container spacing={2} sx={{}}>
@@ -434,7 +435,7 @@ export default function Home(props) {
                       variant="h2"
                       sx={{ fontWeight: 300, fontSize: 19, mb: 1, letterSpacing: 2, textAlign: "center" }}
                     >
-                      {homeData[0].column1blurb}
+                      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={homeData[0].column1blurb} />
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
@@ -487,7 +488,9 @@ export default function Home(props) {
                       variant="h2"
                       sx={{ fontWeight: 300, fontSize: 19, mb: 1, letterSpacing: 2, textAlign: "center" }}
                     >
-                      {homeData[0].column2blurb}
+
+                      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={homeData[0].column2blurb} />
+
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
@@ -540,7 +543,8 @@ export default function Home(props) {
                       variant="h2"
                       sx={{ fontWeight: 300, fontSize: 19, mb: 1, letterSpacing: 2, textAlign: "center" }}
                     >
-                      {homeData[0].column3blurb}
+                      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={homeData[0].column3blurb} />
+
                     </Typography>
                   </div>
                   {/* Adjust the button width */}
@@ -598,8 +602,6 @@ export default function Home(props) {
 
 
 
-          {console.log(homeData[0].testimonials1)}
-
 
 
           <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.blue1, textAlign: "center", color: "white", marginTop: 100, marginBottom: 90 }}>
@@ -623,12 +625,12 @@ export default function Home(props) {
                           </Grid>
                           <Grid>
                             <Typography variant="h1" sx={{ textAlign: "center", fontSize: 21, fontWeight: 500, color: appTheme.palette.primary.white, mb: -1 }}>{item.name}</Typography>
-                            <Typography variant="h2" sx={{ textAlign: "center", fontSize: 18, fontWeight: 400, color: appTheme.palette.primary.white }}>{item.description}</Typography>
+                            <Typography variant="h2" sx={{ textAlign: "center", fontSize: 18, fontWeight: 400, color: appTheme.palette.primary.white }}>  <ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.description} /> </Typography>
                           </Grid>
                         </Grid>
                         <Grid item md={5} xs={12} >
                           <Grid container alignItems="center" justifyContent="center" sx={{}}>
-                            <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, textAlign: "center", color: appTheme.palette.primary.white, width: "90%" }}>{item.blurb}</Typography>
+                            <Typography variant="h2" sx={{ fontSize: 21, fontWeight: 200, textAlign: "center", color: appTheme.palette.primary.white, width: "90%" }}> <ReactMarkdown rehypePlugins={[rehypeRaw]} children={item.blurb} /> </Typography>
                           </Grid>
                         </Grid>
                       </Grid>
@@ -788,7 +790,7 @@ export default function Home(props) {
             cookieName="myAwesomeCookieName2"
             style={{ background: "#435058", fontFamily: "League Spartan", }}
             buttonStyle={{ backgroundColor: "#219D80", color: "white", fontSize: "13px", fontFamily: "League Spartan", }}
-            // expires={150}
+          // expires={150}
           >
             By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
           </CookieConsent>

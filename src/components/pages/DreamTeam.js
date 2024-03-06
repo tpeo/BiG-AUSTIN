@@ -94,15 +94,15 @@ export default function DreamTeam(props) {
 
           {console.log(teamData)}
 
-          <Grid sx={{ height: "auto", mt: 5, mb: 7 }}>
+          <Grid sx={{ height: "auto", mt: 5 }}>
             <Grid container justifyContent="center" alignItems="center">
               <CssBaseline />
               <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                 <Typography variant="h1" sx={{ fontSize: 40 }}>{teamData[0].mainHeading}</Typography>
               </Grid>
             </Grid>
-            <Typography variant="h2" sx={{ fontSize: 22, fontWeight: 400, width: "60%", margin: "0 auto", textAlign: "center" }}>{teamData[0].mainQuote}</Typography>
-            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", width: "70%", margin: "0 auto", mt: 3 }}>{teamData[0].mainBlurb}</Typography>
+            <Typography variant="h2" sx={{ fontSize: 22, fontWeight: 400, width: "60%", margin: "0 auto", textAlign: "center" }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={teamData[0].mainQuote} /> </Typography>
+            <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", width: "70%", margin: "0 auto", mt: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={teamData[0].mainBlurb} />  </Typography>
           </Grid>
 
 
@@ -167,7 +167,7 @@ export default function DreamTeam(props) {
                     <Typography variant="h1" sx={{ fontSize: 25, padding: 0, paddingBottom: 1, fontWeight: 400 }}>{selectedTeamMember.name}</Typography>
                     <Typography variant="h2" sx={{ fontSize: 17, fontWeight: 400 }}>{selectedTeamMember.description}</Typography>
                     <Typography variant="h2" sx={{ fontSize: 17, mt: 2, fontWeight: 300, width: "92%" }}>
-                      <div style={{ overflow: 'auto', maxHeight: '200px' }}> {/* Adjust the maxHeight value as needed */}
+                      <div style={{ overflow: 'auto', maxHeight: '300px' }}> {/* Adjust the maxHeight value as needed */}
                         <ReactMarkdown rehypePlugins={[rehypeRaw]} children={selectedTeamMember.blurb} />
                       </div>
                     </Typography>
@@ -184,14 +184,14 @@ export default function DreamTeam(props) {
 
 
           <Grid sx={{ backgroundColor: appTheme.palette.primary.platinum, borderRadius: "20px 20px 0 0", paddingBottom: "60px" }}>
-            <Grid sx={{ height: "auto", mt: 5, mb: 7, paddingTop: "30px" }}>
+            <Grid sx={{ height: "auto", mt: 5, mb: 3, paddingTop: "30px" }}>
               <Grid container justifyContent="center" alignItems="center">
                 <CssBaseline />
                 <Grid container direction="row" md={6.5} sx={{ justifyContent: "center" }}>
                   <Typography variant="h1" sx={{ fontSize: 36, color: "#2C3343" }}>Board of Directors</Typography>
                 </Grid>
               </Grid>
-              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: "#2C3343", width: "50%", margin: "0 auto", mt: 3 }}>{teamData[0].directorsBlurb}</Typography>
+              <Typography variant="h2" sx={{ fontSize: 20, textAlign: "center", color: "#2C3343", width: "50%", margin: "0 auto", mt: 3 }}><ReactMarkdown rehypePlugins={[rehypeRaw]} children={teamData[0].directorsBlurb} /> </Typography>
             </Grid>
 
             <Grid container spacing={2} sx={{ width: '60%', margin: '0 auto', '@media only screen and (max-width: 600px)': {
