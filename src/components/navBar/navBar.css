@@ -203,12 +203,12 @@ header {
 }
 
 .icon{
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
-.css-i4bv87-MuiSvgIcon-root{
+/* .css-i4bv87-MuiSvgIcon-root{
   margin-right: 10px;
-}
+} */
 .css-zqqkfz-MuiPaper-root-MuiPopover-paper-MuiMenu-paper li{
   /* background-color: blue !important; */
   font-family: 'League Spartan', sans-serif;
