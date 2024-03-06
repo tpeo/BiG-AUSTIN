@@ -126,17 +126,36 @@ export default function About(props) {
             <NavBar />
           </Grid>
 
-          <Grid sx={{ height: "auto", mt: 7}}>
+          {/* <Grid sx={{ height: "auto", mt: 7 }}>
             <Grid container justifyContent="center" alignItems="center">
               <CssBaseline />
               <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
                 <Typography variant="h1" sx={{ fontSize: 40, mb: 5 }}>Impact We Create</Typography>
               </Grid>
             </Grid>
+          </Grid> */}
+
+          <Grid item xs sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center"
+          }}>
+            <Grid sx={{ height: "auto", width: "80%", mt: 10 }}>
+              <Grid container justifyContent="center" alignItems="center">
+                <CssBaseline />
+                <Grid container direction="row" md={6.5} xs={9} sx={{ justifyContent: "center" }}>
+                  <Typography variant="h1" sx={{ textAlign: "center", fontSize: 40, color: appTheme.palette.primary.blue1 }}>{impactData[0].mainHeading}</Typography>
+                </Grid>
+              </Grid>
+
+
+            </Grid>
           </Grid>
 
 
-          <Grid container direction="column" justifyContent="center" alignItems="center" sx={{  mb: 13 }}>
+
+          <Grid container direction="column" justifyContent="center" alignItems="center" sx={{ mb: 13 }}>
             <Grid container justifyContent="center" sx={{ width: "65%" }}>
 
 
@@ -285,7 +304,7 @@ export default function About(props) {
                     <div>
                       <Typography
                         variant="h2"
-                        sx={{ fontWeight: 500, fontSize: 18, mb: 1, color: appTheme.palette.primary.white, textAlign:"center" }}
+                        sx={{ fontWeight: 500, fontSize: 18, mb: 1, color: appTheme.palette.primary.white, textAlign: "center" }}
                       >
                         {impactData[0].stat4subheading}
                       </Typography>
@@ -300,7 +319,7 @@ export default function About(props) {
 
 
 
-          <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.platinum, textAlign: "center", color: "white"}}>
+          <div className="testimonials" style={{ backgroundColor: appTheme.palette.primary.platinum, textAlign: "center", color: "white" }}>
             <div style={{ paddingTop: "80px" }}>
               <div className="arrow-wrapper">
                 {loaded && instanceRef.current && (
@@ -353,7 +372,7 @@ export default function About(props) {
                 {impactData[0].clientstories1.map((item) => (
                   <div className="keen-slider__slide number-slide1">
                     {/* {console.log("impact", item.clientstories)} */}
-                    <Grid container justifyContent="center" alignItems="center" sx={{ width: "72%", paddingTop: "40px", margin: "0 auto", mb: 10, backgroundColor: appTheme.palette.primary.platinum }}>
+                    <Grid container  alignItems="center" sx={{ width: "72%", paddingTop: "40px", margin: "0 auto", mb: 10, backgroundColor: appTheme.palette.primary.platinum }}>
                       <Grid container direction="row" justifyContent="center" alignItems="flex-start" sx={{ width: "100%" }}>
                         <Grid item md={5} xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
                           <Grid sx={{ textAlign: 'center' }}>
@@ -369,7 +388,7 @@ export default function About(props) {
                               <img
                                 src={urlFor(item.image).url()}
                                 alt="Logo"
-                                style={{ maxWidth: '100%', height: 'auto' }}
+                                style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
                               />
                             </div>
                           </Grid>
@@ -377,7 +396,7 @@ export default function About(props) {
 
                         {/* YouTube Video */}
                         <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingTop: "50px" }}>
-                        <iframe width="560" height="315" src={item.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                          <iframe width="560" height="315" src={item.videoURL} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </Grid>
                       </Grid>
                     </Grid>

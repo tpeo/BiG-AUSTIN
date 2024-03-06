@@ -198,12 +198,16 @@ header {
 .menubutton{
   text-align: right;
   justify-content: right;
-  padding-left: 90%;
+  /* padding-left: 30%; */
   padding-top: 25px;
 }
 
+.menubuttonbox {
+  display: flex;
+  justify-content: flex-end;
+}
 .icon{
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 /* .css-i4bv87-MuiSvgIcon-root{
